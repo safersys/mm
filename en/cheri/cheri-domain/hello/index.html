@@ -1,0 +1,6230 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="">
+<meta name="author" content="Lele Ma">
+
+    <link rel="icon" href="/mm/images/favicon.png" type="image/png">
+
+    
+    <title> Lele&#39;s Memo: Examples of Cheri Object Capabilities </title>
+
+    
+    <link href="/mm/css/nucleus.css" rel="stylesheet">
+    <link href="/mm/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="/mm/css/hybrid.css" rel="stylesheet">
+    <link href="/mm/css/featherlight.min.css" rel="stylesheet">
+    <link href="/mm/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="/mm/css/auto-complete.css" rel="stylesheet">
+    <link href="/mm/css/atom-one-dark-reasonable.css" rel="stylesheet">
+    <link href="/mm/css/theme.css" rel="stylesheet">
+    <link href="/mm/css/hugo-theme.css" rel="stylesheet">
+    
+      <link href="/mm/css/theme-blue.css" rel="stylesheet">
+    
+
+    <script src="/mm/js/jquery-3.3.1.min.js"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-84730241-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-84730241-4');
+</script>
+
+  </head>
+  <body class="" data-url="/mm/en/cheri/cheri-domain/hello/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://safersys.github.io/mm">
+<svg id="grav-logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="55%" height="100%"  viewBox="60 0 265.1 49.9" xml:space="preserve">
+
+<g>
+	<path d="M116.6,51.3h-29c-0.5,0-0.9-0.1-1.3-0.2c-0.4-0.2-0.7-0.4-1-0.7c-0.3-0.3-0.5-0.6-0.7-1c-0.2-0.4-0.2-0.8-0.2-1.3V16.3h6.3
+		V45h25.8V51.3z"/>
+	<path d="M154.8,51.3h-22.9c-0.9,0-1.8-0.2-2.9-0.5c-1-0.3-2-0.8-2.9-1.5c-0.9-0.7-1.6-1.6-2.2-2.8c-0.6-1.1-0.9-2.5-0.9-4.2V19.5
+		c0-0.4,0.1-0.9,0.2-1.2c0.2-0.4,0.4-0.7,0.7-1c0.3-0.3,0.6-0.5,1-0.7c0.4-0.2,0.8-0.2,1.3-0.2h28.6v6.3h-25.4v19.8
+		c0,0.8,0.2,1.5,0.7,1.9s1.1,0.7,1.9,0.7h22.9V51.3z M151.9,37h-20v-6.4h20V37z"/>
+	<path d="M197.3,51.3H191v-8.6h-22.3v8.6h-6.3V33.8c0-2.6,0.4-4.9,1.3-7.1s2.1-4,3.7-5.5c1.6-1.5,3.4-2.8,5.5-3.6
+		c2.1-0.9,4.5-1.3,7-1.3h14.3c0.4,0,0.9,0.1,1.2,0.2c0.4,0.2,0.7,0.4,1,0.7s0.5,0.6,0.7,1c0.2,0.4,0.2,0.8,0.2,1.2V51.3z
+		 M168.7,36.4H191V22.6h-11.2c-0.2,0-0.6,0-1.2,0.1c-0.6,0.1-1.4,0.2-2.2,0.4c-0.8,0.2-1.7,0.6-2.6,1c-0.9,0.5-1.8,1.1-2.5,2
+		c-0.8,0.8-1.4,1.9-1.9,3.1c-0.5,1.2-0.7,2.8-0.7,4.5V36.4z"/>
+	<path d="M241.7,28.1c0,1.4-0.2,2.7-0.5,3.9c-0.4,1.1-0.8,2.1-1.5,3c-0.6,0.9-1.3,1.6-2.1,2.2c-0.8,0.6-1.6,1.1-2.5,1.5
+		c-0.9,0.4-1.8,0.7-2.6,0.9c-0.9,0.2-1.7,0.3-2.5,0.3l13.3,11.5h-9.8l-13.2-11.5h-4.6v-6.3H230c0.8-0.1,1.5-0.2,2.2-0.5
+		c0.7-0.3,1.2-0.6,1.7-1.1c0.5-0.5,0.9-1,1.1-1.6c0.3-0.6,0.4-1.4,0.4-2.2v-4c0-0.4,0-0.6-0.1-0.8c-0.1-0.2-0.2-0.3-0.3-0.4
+		c-0.1-0.1-0.3-0.1-0.4-0.2c-0.2,0-0.3,0-0.4,0h-20.9v28.7h-6.3V19.5c0-0.4,0.1-0.9,0.2-1.2c0.2-0.4,0.4-0.7,0.7-1
+		c0.3-0.3,0.6-0.5,1-0.7c0.4-0.2,0.8-0.2,1.3-0.2H234c1.4,0,2.6,0.3,3.6,0.8s1.8,1.2,2.4,1.9c0.6,0.8,1,1.6,1.3,2.5
+		c0.3,0.9,0.4,1.7,0.4,2.5V28.1z"/>
+	<path d="M285.1,48.6c0,0.5-0.1,0.9-0.3,1.3c-0.2,0.4-0.4,0.7-0.7,1c-0.3,0.3-0.6,0.5-1,0.7c-0.4,0.2-0.8,0.2-1.2,0.2
+		c-0.4,0-0.8-0.1-1.2-0.2c-0.4-0.1-0.8-0.4-1.1-0.7l-23.2-24.2v24.7h-6.3V19c0-0.7,0.2-1.2,0.5-1.8c0.4-0.5,0.8-0.9,1.4-1.2
+		c0.6-0.2,1.2-0.3,1.9-0.2s1.2,0.4,1.6,0.9l23.2,24.2V16.3h6.3V48.6z"/>
+</g>
+</svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/mm/js/lunr.min.js"></script>
+<script type="text/javascript" src="/mm/js/auto-complete.js"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/safersys.github.io\/mm\/en";
+    
+</script>
+<script type="text/javascript" src="/mm/js/search.js"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/" title="Secure Virtual Architecture" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/">
+          <b> </b>SVA
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/dsa/" title="Data Structure Analysis" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/dsa/">
+          <b> </b>DSA
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/dsa/passes/" title="Passes" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/dsa/passes/">
+          <b> </b>Passes
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/dsa/passes/localdatastructures/" title="LocalDataStructures" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/dsa/passes/localdatastructures/">
+          <b> </b>LocalDataStructures
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/dsa/passes/datastructures/" title="DataStructures" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/dsa/passes/datastructures/">
+          <b> </b>DataStructures
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/dsa/passes/tddatastructures/" title="TDDataStructures" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/dsa/passes/tddatastructures/">
+          <b> </b>TDDataStructures
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/dsa/passes/eqtddatastructures/" title="EQTDDataStructures" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/dsa/passes/eqtddatastructures/">
+          <b> </b>EQTDDataStructures
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/poolalloc/" title="Automatic Pool Allocation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/poolalloc/">
+          <b> </b>PoolAlloc
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/" title="SAFECode" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/">
+          <b> </b>SAFECode
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/2002controlc/" title="Control-C" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/2002controlc/">
+          <b> </b>Control-C
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/2003nogc/" title="Memory Safety Without Runtime Checks or Garbage Collection" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/2003nogc/">
+          <b> </b>2003 NoGC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/2005embed/" title="2005Embed" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/2005embed/">
+          <b> </b>2005Embed
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/steensgaard/" title="Steensgaard" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/steensgaard/">
+          <b> </b>Steensgaard
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/typesys/" title="Type System in SAFECode" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/typesys/">
+          <b> </b>Type System
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/runtimechecks/" title="Runtime Checks" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/runtimechecks/">
+          <b> </b>Runtime Checks
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/runtimechecks/funcptrs/" title="Function Ptrs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/runtimechecks/funcptrs/">
+          <b> </b>Function Ptrs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/runtimechecks/arraychecks/" title="Arraychecks" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/runtimechecks/arraychecks/">
+          <b> </b>Arraychecks
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/passes/" title="Passes" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/passes/">
+          <b> </b>Passes
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/passes/stackcheck/" title="Stack Check" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/passes/stackcheck/">
+          <b> </b>Stack Check
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/passes/arraybnd/" title="Static Array Bound Checks" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/passes/arraybnd/">
+          <b> </b>ArrayBnd
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/passes/ptrchecks/" title="Pass: Insert Pointer Checks" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/passes/ptrchecks/">
+          <b> </b>PointerCheck
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/safecode/passes/poolchecks/" title="Pass: Insert Pool Checks" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/safecode/passes/poolchecks/">
+          <b> </b>PoolCheck
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/llvaos/" title="LLVA OS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/llvaos/">
+          <b> </b>LLVA OS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/svaos/" title="SVA-OS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/svaos/">
+          <b> </b>SVA-OS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/hwsw/" title="Memory Safety in Hardware and Software Interactions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/hwsw/">
+          <b> </b>HW/SW
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/mm/en/sva/hwsw/securehwsw/" title="Secure HW/SW Interface" class="dd-item ">
+        <a href="/mm/en/sva/hwsw/securehwsw/">
+        <b> </b>Secure Interface
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/mm/en/sva/hwsw/kcofi/" title="KCoFI" class="dd-item ">
+        <a href="/mm/en/sva/hwsw/kcofi/">
+        <b> </b>KCoFI
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/vghost/" title="Virtual Ghost" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/vghost/">
+          <b> </b>VGhost
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sva/intrin/" title="Intrinsics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sva/intrin/">
+          <b> </b>Intrinsics
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/riscv/" title="RISC-V" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/riscv/">
+          <b> </b>RISC-V
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/riscv/attacks/" title="Attacks" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/riscv/attacks/">
+          <b> </b>Attacks
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/riscv/attacks/sp-analog/" title="A2: Analog Malicious Hardware" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/riscv/attacks/sp-analog/">
+          <b> </b>SP-Analog
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/cheri/" title="CHERI" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/mm/en/cheri/">
+          <b> </b>CHERI
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/cheri/intro/" title="Introduction" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/cheri/intro/">
+          Introduction
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/cheri/cheri-domain/" title="Cheri Domain" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/mm/en/cheri/cheri-domain/">
+          Cheri Domain
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/mm/en/cheri/cheri-domain/sandbox-loader/" title="" class="dd-item ">
+        <a href="/mm/en/cheri/cheri-domain/sandbox-loader/">
+        
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/cheri/cheri-c-model/" title="Cheri C Model" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/cheri/cheri-c-model/">
+          <b> </b>Cheri C Model
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/cheri/cheriabi/" title="CheriABI" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/cheri/cheriabi/">
+          <b> </b>CheriABI
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/mm/en/cheri/cheri-cc/" title="Cheri Concentrate" class="dd-item ">
+        <a href="/mm/en/cheri/cheri-cc/">
+        Cheri Concentrate
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/cheri/cheri-kernel/" title="Cheri Kernel" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/cheri/cheri-kernel/">
+          <b> </b>Cheri Kernel
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+             
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/cheri/cheri-user/" title="Cheri Userspace" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/cheri/cheri-user/">
+          <b> </b>Cheri Userspace
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/cheri/hacking/" title="Hacking" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/cheri/hacking/">
+          <b> </b>Hacking
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/mm/en/cheri/cheri-fm/" title="Cheri Formal" class="dd-item ">
+        <a href="/mm/en/cheri/cheri-fm/">
+        <b> </b>Cheri Formal
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/mm/en/cheri/cheri-link/" title="Cheri Link" class="dd-item ">
+        <a href="/mm/en/cheri/cheri-link/">
+        Cheri Link
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/mm/en/cheri/cheri-isa/" title="Cheri ISA Semantic" class="dd-item ">
+        <a href="/mm/en/cheri/cheri-isa/">
+        <b> </b>CHERI ISA
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/" title="Memory Safety" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/">
+          <b> </b>Memory Safety
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/embed/" title="Embed" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/embed/">
+          <b> </b>Embed
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/embed/usfi/" title="Usfi" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/embed/usfi/">
+          <b> </b>Usfi
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/embed/minion/" title="Minion" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/embed/minion/">
+          <b> </b>Minion
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/embed/nescheck/" title="nesCheck" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/embed/nescheck/">
+          <b> </b>nesCheck
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/embed/uxom/" title="uXOM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/embed/uxom/">
+          <b> </b>uXOM
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/nacl/" title="Google Native Client Sandboxing" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/nacl/">
+          <b> </b>2009-NaCl/PNaCl
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/nacl/pnacl/" title="Portable NaCl" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/nacl/pnacl/">
+          <b> </b>2010-PNaCl
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/runtimecheck/" title="Runtime Bound Checking" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/runtimecheck/">
+          <b> </b>Runtime Check
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/runtimecheck/jones-kelly/" title="Jones Kelly" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/runtimecheck/jones-kelly/">
+          <b> </b>Jones Kelly
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/runtimecheck/ruwas-lam/" title="Ruwas Lam" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/runtimecheck/ruwas-lam/">
+          <b> </b>Ruwas Lam
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/temporal/" title="Temporal" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/temporal/">
+          <b> </b>Temporal
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/cets/" title="CETS: Compiler Enforced Temporal Safety for C" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/cets/">
+          <b> </b>CETS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/cets/runtime/" title="Runtime Library of CETS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/cets/runtime/">
+          <b> </b>Runtime
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/lowfat/" title="Low Fat Pointers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/lowfat/">
+          <b> </b>LowFat
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/softbound/" title="SoftBound" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/softbound/">
+          <b> </b>SoftBound
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/hardbound/" title="HardBound" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/hardbound/">
+          <b> </b>HardBound
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/mmachine/" title="M-Mmachine" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/mmachine/">
+          M-Mmachine
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/mpx/" title="Intel MPX" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/mpx/">
+          <b> </b>Intel MPX
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/mpk/" title="Intel MPK" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/mpk/">
+          <b> </b>Intel MPK
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/ssm/" title="SSM" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/ssm/">
+          <b> </b>SSM
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/sgx/" title="SGX" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/sgx/">
+          <b> </b>SGX
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/mem-safe/ripe/" title="RIPE: Runtime Intrusion Prevention Evaluator" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/mem-safe/ripe/">
+          <b> </b>RIPE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/pri-sep/" title="Automatic Privilege Separation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/pri-sep/">
+          <b> </b>Privilege Separation
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/pri-sep/2019privana/" title="PrivAnalyzer: Measuring the Efficacy of Linux Privilege Use" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/pri-sep/2019privana/">
+          <b> </b>2019privAna
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/pri-sep/2017enclave/" title="Glamdring: Automatic Application Partitioning for Intel SGX" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/pri-sep/2017enclave/">
+          <b> </b>2017enclave
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/pri-sep/2007web/" title="Secure web applications via automatic partitioning" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/pri-sep/2007web/">
+          <b> </b>2007web
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/pri-sep/2004privtrans/" title="Privtrans: Automatically Partitioning Programs for Privilege Separation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/pri-sep/2004privtrans/">
+          <b> </b>2004Privtrans
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/prog-ana/" title="Program Analysis" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/prog-ana/">
+          <b> </b>Program Analysis
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/prog-ana/interprocedural/" title="Interprocedural" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/prog-ana/interprocedural/">
+          <b> </b>Interprocedural
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/prog-ana/interprocedural/cfg/" title="Call Graphs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/prog-ana/interprocedural/cfg/">
+          <b> </b>Call Graphs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/prog-ana/pointer/" title="Pointer Analysis" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/prog-ana/pointer/">
+          <b> </b>Pointer Analysis
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/prog-ana/complexity/" title="Complexity" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/prog-ana/complexity/">
+          <b> </b>Complexity
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/prog-ana/complexity/halting/" title="Undecidability of Program Correctness" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/prog-ana/complexity/halting/">
+          <b> </b>Halting
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/prog-ana/fm/" title="Fm" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/prog-ana/fm/">
+          <b> </b>Fm
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/prog-ana/fm/hott/" title="Hott" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/prog-ana/fm/hott/">
+          <b> </b>Hott
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/prog-ana/fm/hott/intro/" title="Intro" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/prog-ana/fm/hott/intro/">
+          <b> </b>Intro
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/" title="System Security" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/">
+          <b> </b>System Security
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/security-pol/" title="Security Policies" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/security-pol/">
+          <b> </b>Security Policies
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/mm/en/sys-sec/security-pol/01-definition/" title="Definition of &#39;Security Policy&#39;" class="dd-item ">
+        <a href="/mm/en/sys-sec/security-pol/01-definition/">
+        <b> </b>Definition of &#39;Security Policy&#39;
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/attacks/" title="Attacks" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/attacks/">
+          <b> </b>Attacks
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/attacks/pe/" title="Privilege Escalation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/attacks/pe/">
+          <b> </b>Privilege Escalation
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/attacks/conpe/" title="Container Privilege Escalation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/attacks/conpe/">
+          <b> </b>Container PE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/attacks/data-op/" title="DOP" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/attacks/data-op/">
+          <b> </b>DOP
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/mm/en/sys-sec/attacks/data-op/2015-ccs-jujutsu/" title="Jujutsu" class="dd-item ">
+        <a href="/mm/en/sys-sec/attacks/data-op/2015-ccs-jujutsu/">
+        <b> </b>Jujutsu
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/defences/" title="Defences" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/defences/">
+          <b> </b>Defences
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/defences/tamper-resistance/" title="Tamper Resistant Software Design and Implementation: IVK" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/defences/tamper-resistance/">
+          <b> </b>Tamper Resistance
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/defences/info-flow/" title="Info Flow Integrity" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/defences/info-flow/">
+          <b> </b>Info Flow
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/detection/" title="Detection" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/detection/">
+          <b> </b>Detection
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/detection/prima/" title="Prima" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/detection/prima/">
+          <b> </b>Prima
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/detection/flicker/" title="Flicker" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/detection/flicker/">
+          <b> </b>Flicker
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/sys-sec/detection/verifyexe/" title="Verifiable Code Execution" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/sys-sec/detection/verifyexe/">
+          <b> </b>VerifyExe
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/compilers/" title="Compilers" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/compilers/">
+          <b> </b>Compilers
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/compilers/backend/" title="Backend" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/compilers/backend/">
+          <b> </b>Backend
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/os/" title="OS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/os/">
+          <b> </b>OS
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/os/l4/" title="L4" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/os/l4/">
+          <b> </b>L4
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/os/rust/" title="OS in Rust" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/os/rust/">
+          <b> </b>OS in Rust
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/os/gnu-hurd/" title="Gnu Hurd" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/os/gnu-hurd/">
+          <b> </b>Gnu Hurd
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/os/freebsd/" title="Freebsd" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/os/freebsd/">
+          <b> </b>Freebsd
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/os/minix3/" title="Minix 3" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/os/minix3/">
+          <b> </b>Minix 3
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/os/linux/" title="Linux" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/os/linux/">
+          <b> </b>Linux
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/mm/en/os/linux/execve/" title="execve" class="dd-item ">
+        <a href="/mm/en/os/linux/execve/">
+        <b> </b>execve
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/arch/" title="Arch" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/arch/">
+          <b> </b>Arch
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/langs/" title="Languages" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/langs/">
+          <b> </b>Languages
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/langs/nesc/" title="NesC" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/langs/nesc/">
+          <b> </b>NesC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/langs/aop/" title="Aspect Oriented Programming" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/langs/aop/">
+          <b> </b>Aop
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/langs/go/" title="Go" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/langs/go/">
+          <b> </b>Go
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/langs/go/setup/" title="Setup" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/langs/go/setup/">
+          <b> </b>Setup
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/langs/go/tour/" title="Tour" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/langs/go/tour/">
+          <b> </b>Tour
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/langs/rust/" title="Rust" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/langs/rust/">
+          <b> </b>Rust
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/langs/proofcc/" title="Proof Carrying Code" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/langs/proofcc/">
+          <b> </b>Proofcc
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/langs/typedas/" title="Typed Assembly Language" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/langs/typedas/">
+          <b> </b>TAL
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/research/" title="Research" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/research/">
+          <b> </b>Research
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/research/paperwriting/" title="Paper Writing" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/research/paperwriting/">
+          <b> </b>Paper Writing
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/practice/" title="Practice" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/practice/">
+          <b> </b>Practice
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/mm/en/practice/msinterview/" title="编程之美" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/mm/en/practice/msinterview/">
+          <b> </b>编程之美
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/mm/en/'>Welcome</a> > <a href='/mm/en/cheri/'>CHERI</a> > <a href='/mm/en/cheri/cheri-domain/'>Cheri Domain</a> > Examples of Cheri Object Capabilities
+          
+         
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#example-1-static-sandboxes">Example 1: static sandboxes</a></li>
+<li><a href="#example-2-ccall-hello-world">Example 2: ccall hello world</a>
+<ul>
+<li><a href="#c-code">C code</a></li>
+</ul></li>
+<li><a href="#example-3-libcheri-sandboxes">Example 3: libcheri sandboxes</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Examples of Cheri Object Capabilities
+            </h1>
+          
+
+        
+
+
+
+
+
+
+
+<p>References:</p>
+
+<p>[1]</p>
+
+<!-- 
+#### Questions/Proposals
+ -->
+
+<p>Code is derived from <a href="https://github.com/CTSRD-CHERI/cheribsd/blob/master/bin/cheritest/cheritest_ccall.c">cheritest_ccall.c</a>.</p>
+
+<h4 id="example-1-static-sandboxes">Example 1: static sandboxes</h4>
+
+<p>The first example is a hand-crafted, minimalist sandbox that don&rsquo;t even have stacks: no local data, just contain one instruction <code>creturn</code>.
+For stacks, see <a href="#example-2-ccall-hello-world">libcheri examples</a></p>
+
+<p>For code capability, need a function pointer as base, and another function pointer as the boundary enclosing the last instruction.
+The following example have function named <code>sandbox_creturn</code> and ends on <code>sandbox_creturn_end</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-asm" data-lang="asm">	<span style="color:#a6e22e">.text</span>
+	<span style="color:#a6e22e">.type</span> <span style="color:#66d9ef">sandbox_creturn</span>,<span style="color:#a6e22e">@function</span>
+	<span style="color:#a6e22e">.global</span> <span style="color:#66d9ef">sandbox_creturn</span>
+	<span style="color:#a6e22e">.ent</span> <span style="color:#66d9ef">sandbox_creturn</span>
+sandbox_creturn:
+
+	<span style="color:#a6e22e">creturn</span>
+	<span style="color:#a6e22e">.end</span> <span style="color:#66d9ef">sandbox_creturn</span>
+
+	<span style="color:#a6e22e">.global</span> <span style="color:#66d9ef">sandbox_creturn_end</span>
+sandbox_creturn_end:
+	<span style="color:#a6e22e">.size</span> <span style="color:#66d9ef">sandbox_creturn</span>, <span style="color:#66d9ef">sandbox_creturn_end</span> - <span style="color:#66d9ef">sandbox_creturn</span>
+	<span style="color:#a6e22e">.size</span> <span style="color:#66d9ef">sandbox_creturn_end</span>, <span style="color:#ae81ff">0</span></code></pre></div>
+<p>This is the man page for <a href="https://ftp.gnu.org/old-gnu/Manuals/gas-2.9.1/html_chapter/as_7.html#SEC67">assembler directives</a> and <a href="https://ftp.gnu.org/old-gnu/Manuals/gas-2.9.1/html_chapter/as_19.html#SEC223">MIPS directives</a>.</p>
+
+<p>Data capability is set to have the same range (base and bounds) as code capability. The different permission on the code and data capabilities would limit how they can be used.</p>
+
+<p>Main testing code as following. It will create a pair of sealed code and data capabilities; then define them as an <code>cheri_object</code>; finally invoke it via <code>libcheri_invoke</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> __capability sandbox_creturn_sealcap;
+<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> __capability sandbox_creturn_codecap;
+<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> __capability sandbox_creturn_datacap;
+
+<span style="color:#66d9ef">struct</span> cheri_object co;
+
+<span style="color:#75715e">/*
+</span><span style="color:#75715e">* Create sealing, sealed code, and sealed data capabilities for each
+</span><span style="color:#75715e">* of the three classes used in these tests.
+</span><span style="color:#75715e">*/</span>
+sandbox_creturn_sealcap <span style="color:#f92672">=</span> libcheri_type_alloc();
+
+sandbox_creturn_codecap <span style="color:#f92672">=</span> cheri_seal(
+    codecap_create(<span style="color:#f92672">&amp;</span>sandbox_creturn, <span style="color:#f92672">&amp;</span>sandbox_creturn_end), 
+    sandbox_creturn_sealcap);
+
+sandbox_creturn_datacap <span style="color:#f92672">=</span> cheri_seal(
+    datacap_create(<span style="color:#f92672">&amp;</span>sandbox_creturn, <span style="color:#f92672">&amp;</span>sandbox_creturn_end),
+    sandbox_creturn_sealcap);
+
+<span style="color:#75715e">/*
+</span><span style="color:#75715e"> * CCall code that will immediately CReturn.
+</span><span style="color:#75715e"> */</span>
+
+co.co_codecap <span style="color:#f92672">=</span> sandbox_creturn_codecap;
+co.co_datacap <span style="color:#f92672">=</span> sandbox_creturn_datacap;
+(<span style="color:#66d9ef">void</span>)libcheri_invoke(co, <span style="color:#ae81ff">0</span>,
+    <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,
+    NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);</code></pre></div>
+<p>Manually create code and data capability pair by <code>codecap_create()</code> and <code>datacap_create()</code>.</p>
+
+<p>The definition of <code>codecap_create()</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> __capability
+<span style="color:#a6e22e">codecap_create</span>(<span style="color:#66d9ef">void</span> (<span style="color:#f92672">*</span>sandbox_base)(<span style="color:#66d9ef">void</span>), <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>sandbox_end)
+{
+	<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> __capability codecap;
+
+<span style="color:#75715e">#ifdef __CHERI_PURE_CAPABILITY__
+</span><span style="color:#75715e"></span>	(<span style="color:#66d9ef">void</span>)sandbox_end;
+	codecap <span style="color:#f92672">=</span> cheri_andperm(sandbox_base,
+	    CHERI_PERM_GLOBAL <span style="color:#f92672">|</span> CHERI_PERM_LOAD <span style="color:#f92672">|</span> CHERI_PERM_EXECUTE);
+<span style="color:#75715e">#else
+</span><span style="color:#75715e"></span>	codecap <span style="color:#f92672">=</span> cheri_codeptrperm(sandbox_base,
+	    (size_t)sandbox_end <span style="color:#f92672">-</span> (size_t)sandbox_base,
+	    CHERI_PERM_GLOBAL <span style="color:#f92672">|</span> CHERI_PERM_LOAD <span style="color:#f92672">|</span> CHERI_PERM_EXECUTE);
+<span style="color:#75715e">#endif
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> (codecap);
+}</code></pre></div>
+<p>Definition of <code>datacap_create()</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> __capability
+<span style="color:#a6e22e">datacap_create</span>(<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>sandbox_base, <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>sandbox_end)
+{
+	<span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span> __capability datacap;
+
+<span style="color:#75715e">#ifdef __CHERI_PURE_CAPABILITY__
+</span><span style="color:#75715e"></span>	(<span style="color:#66d9ef">void</span>)sandbox_end;
+	datacap <span style="color:#f92672">=</span> cheri_andperm(sandbox_base,
+	    CHERI_PERM_GLOBAL <span style="color:#f92672">|</span> CHERI_PERM_LOAD <span style="color:#f92672">|</span> CHERI_PERM_STORE <span style="color:#f92672">|</span>
+	    CHERI_PERM_LOAD_CAP <span style="color:#f92672">|</span> CHERI_PERM_STORE_CAP <span style="color:#f92672">|</span>
+	    CHERI_PERM_STORE_LOCAL_CAP);
+<span style="color:#75715e">#else
+</span><span style="color:#75715e"></span>	datacap <span style="color:#f92672">=</span> cheri_ptrperm(sandbox_base,
+	    (size_t)sandbox_end <span style="color:#f92672">-</span> (size_t)sandbox_base,
+	    CHERI_PERM_GLOBAL <span style="color:#f92672">|</span> CHERI_PERM_LOAD <span style="color:#f92672">|</span> CHERI_PERM_STORE <span style="color:#f92672">|</span>
+	    CHERI_PERM_LOAD_CAP <span style="color:#f92672">|</span> CHERI_PERM_STORE_CAP <span style="color:#f92672">|</span>
+	    CHERI_PERM_STORE_LOCAL_CAP);
+<span style="color:#75715e">#endif
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> (datacap);
+}</code></pre></div>
+<h4 id="example-2-ccall-hello-world">Example 2: ccall hello world</h4>
+
+<p>Annotations:</p>
+
+<ul>
+<li><p><code>cheri_ccall</code>: compiler will replaces calls to it with specially crafted calls to <code>cheriinvoke</code>, with method number (identified by a gplobal variable that is initialised by the sandbox loader) in correct register. This annotation provides two declarations of the function:</p>
+
+<ul>
+<li><code>cheri_method_suffix</code>: specifies a suffix that takes an explicit CHERI class argument.</li>
+<li><code>cheri_method_class</code>: specifies a global variable that automatically sets the class (code and data capability) argument.</li>
+</ul></li>
+
+<li><p><code>cheri_ccallee</code>: will use the ccall calling convention. The compile will zero any return registers. Allow functions to be declared that are usable both inside and between compartments.</p>
+
+<ul>
+<li>Functions with <code>ccall</code> calling convention have two extra capability argument registers, <code>$c1</code> and <code>$c2</code>, which contains the code and data capabilities, an extra integer argument register, <code>$v0</code>, which contains the method number. These are not exposed to functions marked as using the <code>ccallee</code> calling convention, which accept the normal calling convention&rsquo;s argument registers.</li>
+</ul></li>
+</ul>
+
+<h5 id="c-code">C code</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C" data-lang="C"><span style="color:#75715e">// The `invoke_cheri_system_helloworld()` will invoke hello world in a sandbox:
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// file: bin/cheritest/cheritest_libcheri.c
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span>
+<span style="color:#a6e22e">test_sandbox_cs_helloworld</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">struct</span> cheri_test <span style="color:#f92672">*</span>ctp __unused)
+{
+	register_t v;
+
+	v <span style="color:#f92672">=</span> invoke_cheri_system_helloworld();
+	<span style="color:#66d9ef">if</span> (v <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>)
+		cheritest_failure_errx(<span style="color:#e6db74">&#34;Sandbox returned %jd&#34;</span>, (intmax_t)v);
+	<span style="color:#66d9ef">else</span>
+		cheritest_success();
+}
+
+
+<span style="color:#75715e">// The following is the declaration of the call gate of 
+</span><span style="color:#75715e">// `invoke_cheri_system_helloworld()`
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// file: libexec/cheritest-helper/cheritest-helper.h
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">struct</span> cheri_object;
+
+BEGIN_CAPABILITIES
+CHERITEST_CCALL <span style="color:#66d9ef">int</span>	<span style="color:#a6e22e">invoke_cheri_system_helloworld</span>(<span style="color:#66d9ef">void</span>);
+END_CAPABILITIES
+
+
+<span style="color:#75715e">// file: libexec/cheritest-helper/cheritest-helper.c
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">struct</span> cheri_object cheritest;
+<span style="color:#75715e">#ifdef CHERITEST_INTERNAL
+</span><span style="color:#75715e">#define	CHERITEST_CCALL					\
+</span><span style="color:#75715e"></span>    __attribute__((cheri_ccallee))			\
+    __attribute__((cheri_method_class(cheritest)))
+<span style="color:#75715e">#else
+</span><span style="color:#75715e">#define	CHERITEST_CCALL					\
+</span><span style="color:#75715e"></span>    __attribute__((cheri_ccall))			\
+    __attribute__((cheri_method_suffix(<span style="color:#e6db74">&#34;_cap&#34;</span>)))	\
+    __attribute__((cheri_method_class(cheritest)))
+<span style="color:#75715e">#endif
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">// The following is the definition of the call gate of 
+</span><span style="color:#75715e"></span><span style="color:#f92672">//</span> <span style="color:#960050;background-color:#1e0010">`</span>invoke_cheri_system_helloworld()<span style="color:#960050;background-color:#1e0010">`</span></code></pre></div>
+<p>The assembly code for <code>test_sandbox_cs_helloworld()</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-objdump" data-lang="objdump">/* file: cheritest.s , commit: def7a422bf */
+
+000000000003c8a8 test_sandbox_cs_helloworld:
+   3c8a8:       67 bd ff e0     daddiu  $sp, $sp, -32
+   3c8ac:       ff bf 00 18     sd      $ra, 24($sp)
+   3c8b0:       ff be 00 10     sd      $fp, 16($sp)
+   3c8b4:       ff bc 00 08     sd      $gp, 8($sp)
+   3c8b8:       03 a0 f0 25     move    $fp, $sp
+   3c8bc:       3c 01 00 11     lui     $1, 17
+   3c8c0:       00 39 08 2d     daddu   $1, $1, $25
+   3c8c4:       64 3c f7 58     daddiu  $gp, $1, -2216
+   3c8c8:       df 81 89 20     ld      $1, -30432($gp)
+   3c8cc:       df 83 87 80     ld      $3, -30848($gp)
+   3c8d0:       dc 22 00 00     ld      $2, 0($1)
+   3c8d4:       d8 20 18 00     clc     $c1, $3, 0($ddc)
+   3c8d8:       64 61 00 20     daddiu  $1, $3, 32
+   3c8dc:       d8 40 08 00     clc     $c2, $1, 0($ddc)
+   3c8e0:       df 99 87 88     ld      $25, -30840($gp)
+   3c8e4:       48 03 02 bf     cgetnull        $c3
+   3c8e8:       48 04 02 bf     cgetnull        $c4
+   3c8ec:       48 05 02 bf     cgetnull        $c5
+   3c8f0:       48 06 02 bf     cgetnull        $c6
+   3c8f4:       48 07 02 bf     cgetnull        $c7
+   3c8f8:       48 08 02 bf     cgetnull        $c8
+   3c8fc:       48 09 02 bf     cgetnull        $c9
+   3c900:       48 0a 02 bf     cgetnull        $c10
+   3c904:       64 04 00 00     daddiu  $4, $zero, 0
+   3c908:       64 05 00 00     daddiu  $5, $zero, 0
+   3c90c:       64 06 00 00     daddiu  $6, $zero, 0
+   3c910:       64 07 00 00     daddiu  $7, $zero, 0
+   3c914:       64 08 00 00     daddiu  $8, $zero, 0
+   3c918:       64 09 00 00     daddiu  $9, $zero, 0
+   3c91c:       64 0a 00 00     daddiu  $10, $zero, 0
+   3c920:       03 20 f8 09     jalr    $25
+   3c924:       64 0b 00 00     daddiu  $11, $zero, 0
+   3c928:       04 41 00 06     bgez    $2, 28 &lt;test_sandbox_cs_helloworld+0x9c&gt;
+   3c92c:       00 00 00 00     nop
+   3c930:       df 81 80 c8     ld      $1, -32568($gp)
+   3c934:       00 02 28 00     sll     $5, $2, 0
+   3c938:       df 99 84 90     ld      $25, -31600($gp)
+   3c93c:       03 20 f8 09     jalr    $25
+   3c940:       64 24 3b ce     daddiu  $4, $1, 15310
+   3c944:       df 99 84 88     ld      $25, -31608($gp)
+   3c948:       03 20 f8 09     jalr    $25
+   3c94c:       00 00 00 00     nop</code></pre></div>
+<p>Another disassembly from cheriabitest:</p>
+
+<pre><code>/* file: cheriabitest.s, commit: def7a422bf*/
+0000000120087310 test_sandbox_cs_helloworld:
+120087310:      4a 6b 5f 80     cincoffset      $c11, $c11, -128
+120087314:      fb 0b 00 06     csc     $c24, $zero, 96($c11)
+120087318:      fa 4b 00 04     csc     $c18, $zero, 64($c11)
+12008731c:      fa 2b 00 02     csc     $c17, $zero, 32($c11)
+120087320:      48 18 58 11     cincoffset      $c24, $c11, $zero
+120087324:      3c 01 00 14     lui     $1, 20
+120087328:      64 21 e1 30     daddiu  $1, $1, -7888
+12008732c:      48 12 60 51     cincoffset      $c18, $c12, $1
+120087330:      74 32 08 60     clcbi   $c1, 34304($c18)
+120087334:      74 52 03 5a     clcbi   $c2, 13728($c18)
+120087338:      c8 41 00 03     cld     $2, $zero, 0($c1)
+12008733c:      d8 22 00 00     clc     $c1, $zero, 0($c2)
+120087340:      d8 42 00 02     clc     $c2, $zero, 32($c2)
+120087344:      75 92 03 5c     clcbi   $c12, 13760($c18)
+120087348:      48 03 02 bf     cgetnull        $c3
+12008734c:      48 04 02 bf     cgetnull        $c4
+120087350:      48 05 02 bf     cgetnull        $c5
+120087354:      48 06 02 bf     cgetnull        $c6
+120087358:      48 07 02 bf     cgetnull        $c7
+12008735c:      48 08 02 bf     cgetnull        $c8
+120087360:      48 09 02 bf     cgetnull        $c9
+120087364:      48 0a 02 bf     cgetnull        $c10
+120087368:      64 04 00 00     daddiu  $4, $zero, 0
+12008736c:      64 05 00 00     daddiu  $5, $zero, 0
+120087370:      64 06 00 00     daddiu  $6, $zero, 0
+120087374:      64 07 00 00     daddiu  $7, $zero, 0
+120087378:      64 08 00 00     daddiu  $8, $zero, 0
+12008737c:      64 09 00 00     daddiu  $9, $zero, 0
+120087380:      64 0a 00 00     daddiu  $10, $zero, 0
+120087384:      48 11 63 3f     cjalr   $c12, $c17
+120087388:      64 0b 00 00     daddiu  $11, $zero, 0
+12008738c:      04 41 00 09     bgez    $2, 40 &lt;test_sandbox_cs_helloworld+0xa4&gt;
+120087390:      00 00 00 00     nop
+120087394:      00 02 08 00     sll     $1, $2, 0
+120087398:      e8 2b 00 03     csd     $1, $zero, 0($c11)
+12008739c:      4a 81 58 08     csetbounds      $c1, $c11, 8
+1200873a0:      34 01 ff d7     ori     $1, $zero, 65495
+1200873a4:      74 72 08 54     clcbi   $c3, 34112($c18)
+1200873a8:      75 92 01 92     clcbi   $c12, 6432($c18)
+1200873ac:      48 11 63 3f     cjalr   $c12, $c17
+1200873b0:      48 0d 08 4d     candperm        $c13, $c1, $1
+1200873b4:      75 92 01 8e     clcbi   $c12, 6368($c18)
+1200873b8:      48 11 63 3f     cjalr   $c12, $c17
+1200873bc:      00 00 00 00     nop
+
+</code></pre>
+
+<h4 id="example-3-libcheri-sandboxes">Example 3: libcheri sandboxes</h4>
+
+
+<footer class=" footline" >
+	
+
+<div style="text-align: right">
+	 
+	  <i class='fas fa-calendar'></i>
+	  Created Jul 5, 2019 
+	
+	 
+	// Last Updated Aug 10, 2019
+	
+	
+	
+	
+	</div>
+
+</footer>
+
+
+        
+        </div> 
+        
+
+
+<hr style="border: 0;color:green; height:2px; background-image: linear-gradient(to right, rgba(255, 215, 0, 0), rgba(255, 215, 0, 1), rgba(255, 215, 0, 0));"> 
+
+
+
+
+
+<p style="text-align:center;color: green;">
+    If you could revise 
+    <br> the fundmental principles of  
+    <br> computer-system design
+    <br> to improve security... 
+    <br>
+    <br> ... what would you change?
+</p>
+
+
+
+
+
+<hr style="border: 0;color:green; height:2px; background-image: linear-gradient(to right, rgba(255, 215, 0, 0), rgba(255, 215, 0, 1), rgba(255, 215, 0, 0));"> 
+
+
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/mm/js/clipboard.min.js"></script>
+    <script src="/mm/js/perfect-scrollbar.min.js"></script>
+    <script src="/mm/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/mm/js/jquery.sticky.js"></script>
+    <script src="/mm/js/featherlight.min.js"></script>
+    <script src="/mm/js/html5shiv-printshiv.min.js"></script>
+    <script src="/mm/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/mm/js/modernizr.custom-3.6.0.js"></script>
+    <script src="/mm/js/learn.js"></script>
+    <script src="/mm/js/hugo-learn.js"></script>
+
+    <link href="/mm/mermaid/mermaid.css" rel="stylesheet" />
+    <script src="/mm/mermaid/mermaid.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+<script type="text/javascript" async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+tex2jax: {
+  inlineMath: [['$','$'], ['\\(','\\)']],
+  displayMath: [['$$','$$']],
+  processEscapes: true,
+  processEnvironments: true,
+  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+  TeX: { equationNumbers: { autoNumber: "AMS" },
+       extensions: ["AMSmath.js", "AMSsymbols.js"] }
+}
+});
+MathJax.Hub.Queue(function() {
+  
+  
+  
+  var all = MathJax.Hub.getAllJax(), i;
+  for(i = 0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+
+MathJax.Hub.Config({
+
+TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  </body>
+</html>
+

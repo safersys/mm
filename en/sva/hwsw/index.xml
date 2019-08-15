@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Memory Safety in Hardware and Software Interactions on Lele&#39;s Memo</title>
+    <link>https://safersys.github.io/mm/en/sva/hwsw/</link>
+    <description>Recent content in Memory Safety in Hardware and Software Interactions on Lele&#39;s Memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 17 Jul 2019 00:14:55 -0400</lastBuildDate>
+    
+	<atom:link href="https://safersys.github.io/mm/en/sva/hwsw/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Secure HW/SW Interface</title>
+      <link>https://safersys.github.io/mm/en/sva/hwsw/securehwsw/</link>
+      <pubDate>Mon, 22 Jul 2019 16:15:09 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/sva/hwsw/securehwsw/</guid>
+      <description>Motivation OS memory safety research Memory safety for OS code:
+ OS designs based on safe languages; Compiler techniques such as SVA-M to enforce memory safety for commodity OSs in unsafe languages; Instrumentation techniques to isolate a kernel from extensions such as device drivers;  Singularity, SPIN, JX, JavaOS, SafeDrive, and SVA-M are examples of system that enforce a safe execution environment.
+Common asumptions of OS memory safety research Unfortunately, all these memory safety techniques (except Verve, which has very limited I/O and no MMU support) make assumptions that are routinely violated by low-level initeractions between an OS kernel and hardware, even if implemented in safe programming language.</description>
+    </item>
+    
+    <item>
+      <title>KCoFI</title>
+      <link>https://safersys.github.io/mm/en/sva/hwsw/kcofi/</link>
+      <pubDate>Mon, 22 Jul 2019 16:29:37 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/sva/hwsw/kcofi/</guid>
+      <description>Reference1
+ referee ↩   </description>
+    </item>
+    
+  </channel>
+</rss>

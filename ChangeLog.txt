@@ -1,0 +1,974 @@
+
+2019-08-15 00:10:43 -0400 3d17dd6
+
+    intro uxom
+
+
+2019-08-14 23:55:03 -0400 3fec288
+
+    to read usfi
+
+
+2019-08-14 22:56:31 -0400 c77cd95
+
+    update deploy script
+
+
+2019-08-14 22:13:13 -0400 c868c09
+
+    create embed/; move nesCheck and uxom; create minion
+
+
+2019-08-14 22:12:30 -0400 afb2c9c
+
+    add langs: tal; nesC
+
+
+2019-08-14 20:51:11 -0400 db93247
+
+    test
+
+
+2019-08-14 20:17:02 -0400 ce26954
+
+    nesCheck
+
+
+2019-08-14 00:48:06 -0400 1ed5e8f
+
+    pnacl: to do x86-64
+
+
+2019-08-14 00:41:58 -0400 336789b
+
+    guard page
+
+
+2019-08-14 00:35:53 -0400 d53a17c
+
+    impl on arm
+
+
+2019-08-13 23:07:02 -0400 ac12162
+
+    deplpy.sh: update history format: markdown table
+
+
+2019-08-13 22:26:07 -0400 ddf9be7
+
+    data mask in pnacl
+
+
+2019-08-13 21:29:00 -0400 6c78351
+
+    pnacl motivation
+
+
+2019-08-13 16:53:45 -0400 0ec8a9d
+
+    nacl resource descriptor for shared memory objects, etc.
+
+
+2019-08-13 16:27:50 -0400 8fda62b
+
+    native client: pcc
+
+
+2019-08-13 16:27:26 -0400 561af67
+
+    to read: pcc
+
+
+2019-08-13 15:14:39 -0400 a546268
+
+    one more book
+
+
+2019-08-13 00:49:54 -0400 6f25b10
+
+    tamper resistant: IVK to read;
+
+
+2019-08-13 00:39:46 -0400 2ef969e
+
+    tamper resistant software
+
+
+2019-08-13 00:28:02 -0400 c0153cc
+
+    prima: info flow integrity attestation/detection
+
+
+2019-08-12 23:54:26 -0400 2065171
+
+    rename secPol to security-pol
+
+
+2019-08-12 23:45:28 -0400 f096435
+
+    rename folders back with no upper letter
+
+
+2019-08-12 23:16:00 -0400 fe2bd56
+
+    add sys sec in general
+
+
+2019-08-12 22:59:47 -0400 24780b7
+
+    rename top folders
+
+
+2019-08-12 22:59:24 -0400 eb768e0
+
+    rootkit detection
+
+
+2019-08-12 22:34:57 -0400 0bad354
+
+    native client
+
+
+2019-08-12 22:34:05 -0400 97e50fe
+
+    privilege escalation papers
+
+
+2019-08-12 16:40:26 -0400 abf4b07
+
+    last mod date
+
+
+2019-08-12 16:39:42 -0400 0689e8a
+
+    useful links for basic research methods
+
+
+2019-08-12 16:39:21 -0400 4e631ca
+
+    nacl: original
+
+
+2019-08-10 21:50:17 -0400 5ac20fc
+
+    comment out the last mod date
+
+
+2019-08-10 21:48:09 -0400 a0e6d7d
+
+    vg and sva intrinsics
+
+
+2019-08-10 21:47:18 -0400 03b2efd
+
+    add container pe
+
+
+2019-08-10 21:38:13 -0400 e1958f6
+
+    add new category attacks/
+
+
+2019-08-10 15:22:22 -0400 4cd37ce
+
+    moving website to safersys.github.io
+
+
+2019-08-08 09:47:59 -0400 40d35e4
+
+    rename ChangeLog.html back to .txt
+
+
+2019-08-08 00:08:59 -0400 879e63b
+
+    add keys to search for cheri feature;remove web_commits.log;
+
+
+2019-08-07 23:25:25 -0400 31490d3
+
+    change delpoy.sh; only keep history in public html; but no history in hugo source index page
+
+
+2019-08-07 23:01:43 -0400 01efd2a
+
+    rename ChangeLog.txt to .html
+
+
+2019-08-07 22:55:43 -0400 64ed8aa
+
+    write message to index with reset 2
+
+
+2019-08-07 22:51:54 -0400 73b137d
+
+    move to memflakes.github.io
+
+
+2019-08-07 17:47:21 -0400 fe9c836
+
+    add creation data; add author, commented out now;
+
+
+2019-08-07 00:11:41 -0400 b1009aa
+
+    backed tutorial link
+
+
+2019-08-06 23:11:04 -0400 58337bb
+
+    update script: change history before stage
+
+
+2019-08-06 23:10:26 -0400 a84835a
+
+    update script: change history before stage
+
+
+2019-08-06 23:08:42 -0400 afcdf5e
+
+    update script: change history before stage
+
+
+2019-08-06 22:39:43 -0400 0bc8451
+
+    no drafts
+
+
+2019-08-04 21:15:53 -0400 3d854d1
+
+    todo for compilers
+
+
+2019-08-04 19:58:00 -0400 528cb2f
+
+    go setup/tour pub
+
+
+2019-08-04 15:48:22 -0400 1205971
+
+    tour 01: functions variables types and packages
+
+
+2019-08-04 13:54:35 -0400 1f66d53
+
+    setup of golang
+
+
+2019-08-02 16:45:23 -0400 22c6818
+
+    cheri-c-model in new folder; l4 os, minix original
+
+
+2019-08-02 09:54:34 -0400 3f1a349
+
+    add dinosaur book
+
+
+2019-08-02 09:27:41 -0400 6b49f31
+
+    put lastest 100 lines of change history to home page
+
+
+2019-08-02 09:15:54 -0400 9847b31
+
+    privtrans to 3.2.2
+
+
+2019-08-01 14:38:39 -0400 19fba31
+
+    privtrans ch2: annotation and policies
+
+
+2019-07-31 15:46:54 -0400 09ce27f
+
+    privtrans:ch1
+
+
+2019-07-31 15:46:14 -0400 bd9a41f
+
+    colored/one more bar for comments
+
+
+2019-07-31 12:20:44 -0400 30225de
+
+    overall of privtrans
+
+
+2019-07-31 11:53:42 -0400 ce90aaa
+
+    fix a broken link
+
+
+2019-07-31 11:35:06 -0400 fa7cdc1
+
+    add pageComments variable
+
+
+2019-07-31 10:55:32 -0400 187bcd9
+
+    a more general title automatic privilege separation
+
+
+2019-07-31 10:35:13 -0400 bd86c65
+
+    automatic compartmentalization
+
+
+2019-07-31 10:33:06 -0400 870a21c
+
+    todo PrivAnalyzer to read
+
+
+2019-07-31 10:28:35 -0400 f20a3e3
+
+    pp ask: auto determine least privilege
+
+
+2019-07-31 10:27:59 -0400 191bc6d
+
+    comments on every page
+
+
+2019-07-31 10:03:32 -0400 8a068dd
+
+    new todo: prog.partition
+
+
+2019-07-31 01:30:07 -0400 4a5f05b
+
+    add design pattern book
+
+
+2019-07-31 01:15:01 -0400 0bb12b7
+
+    add aop, to read
+
+
+2019-07-31 00:55:30 -0400 d839d4f
+
+    reorder privilege separation in the menu
+
+
+2019-07-31 00:52:28 -0400 0c55084
+
+    3 new papers on program partition, to read
+
+
+2019-07-30 17:35:10 -0400 2c8eea6
+
+    typesys in safecode: c lang
+
+
+2019-07-30 17:16:22 -0400 6fd9247
+
+    2006safecode: typesys: language
+
+
+2019-07-30 16:11:37 -0400 f1462ad
+
+    questions on type system in dsa; rename questions/propersals to Q&A; XuanTie not Xuantie;
+
+
+2019-07-30 12:27:01 -0400 1452144
+
+    todo: type system in dsa; todo func ptr static check & runtime check in safecode
+
+
+2019-07-30 11:10:54 -0400 971bbe5
+
+    answer function pointer runtime check in SAFECode
+
+
+2019-07-30 10:59:44 -0400 65744f2
+
+    code: line-height 1.6
+
+
+2019-07-30 10:46:20 -0400 cd1cf17
+
+    kernel lang by extending C? golang link
+
+
+2019-07-30 00:30:46 -0400 92f67e9
+
+    1% userspace code change
+
+
+2019-07-30 00:27:01 -0400 5e51127
+
+    answer cheri kernel question: a hybrid kernel in CheriABI
+
+
+2019-07-30 00:16:59 -0400 9724ca1
+
+    new language arch menu
+
+
+2019-07-30 00:05:25 -0400 8774810
+
+    os in rust link
+
+
+2019-07-29 23:51:29 -0400 a0dc3c6
+
+    safecode TR 2005: type inference in dsa by analyzing pointer uses
+
+
+2019-07-29 17:47:14 -0400 dbb2e86
+
+    func pointers
+
+
+2019-07-29 16:39:46 -0400 907e6e8
+
+    questions on affine transformations
+
+
+2019-07-29 16:31:47 -0400 909b745
+
+    control C
+
+
+2019-07-29 12:26:23 -0400 a26808e
+
+    todos
+
+
+2019-07-29 12:17:43 -0400 4802e4b
+
+    runtime check for array bounds in safecode
+
+
+2019-07-29 00:09:16 -0400 038f305
+
+    update book list
+
+
+2019-07-28 23:38:03 -0400 3e4161f
+
+    dsa basics from 2005LattnerPhD
+
+
+2019-07-28 23:37:21 -0400 3ab9bd0
+
+    use latex in markdown based on MathJax
+
+
+2019-07-28 14:40:47 -0400 643989e
+
+    1997 backwards compatible bound checking by Jones and Kelly; hott in fm;
+
+
+2019-07-26 16:04:46 -0400 7dfeb64
+
+    runtime checks; pingtouge xuantie 910
+
+
+2019-07-26 11:07:44 -0400 84d42f7
+
+    cfg added
+
+
+2019-07-26 10:52:03 -0400 b7d451d
+
+    interprocedural in pa
+
+
+2019-07-26 00:22:19 -0400 96b2e52
+
+    reorganize dirs in mem safety; move cets/sft/hdbnds to mem safety folder
+
+
+2019-07-25 23:36:40 -0400 d5c9676
+
+    implementation of safecode
+
+
+2019-07-25 23:22:55 -0400 eb4603a
+
+    cheri questions from seminar talk
+
+
+2019-07-25 18:16:13 -0400 2090b82
+
+    passes in safecode; add softarch pdf
+
+
+2019-07-25 13:05:56 -0400 347898d
+
+    formating
+
+
+2019-07-25 13:01:35 -0400 b7f6c4e
+
+    array  bnd chck
+
+
+2019-07-25 12:18:19 -0400 392533e
+
+    pointer checks in safecode/lib
+
+
+2019-07-25 12:07:19 -0400 4cfa13b
+
+    pool check passes in safecode/lib
+
+
+2019-07-25 10:58:44 -0400 0dd5f18
+
+    todo in safecode; one fig in analog
+
+
+2019-07-25 10:07:37 -0400 28697fc
+
+    analog hw, 2016sp
+
+
+2019-07-24 00:11:17 -0400 6dff87f
+
+    ripe 5 dimensions
+
+
+2019-07-23 17:37:15 -0400 c6a95c4
+
+    add cets figure
+
+
+2019-07-23 17:31:49 -0400 0a5f12f
+
+    cets, softbound
+
+
+2019-07-23 16:36:24 -0400 bafc4a3
+
+    formats
+
+
+2019-07-23 11:47:36 -0400 a6ec156
+
+    update cheriabi with key challenges in asplos paper
+
+
+2019-07-23 01:40:48 -0400 6c95bd1
+
+    content depth to 2 in sva
+
+
+2019-07-23 01:33:51 -0400 515b89a
+
+    shorten menu title; hover color;
+
+
+2019-07-23 01:15:40 -0400 4054511
+
+    format: hide children in menu bar
+
+
+2019-07-23 01:12:01 -0400 66a235e
+
+    imp cets
+
+
+2019-07-23 00:39:04 -0400 7827cab
+
+    implement of softboundcets trie
+
+
+2019-07-22 17:41:22 -0400 b92b5b6
+
+    low level hwsw interface
+
+
+2019-07-21 15:11:44 -0400 d743265
+
+    move safecode to a folder
+
+
+2019-07-20 15:45:22 -0400 9256cb8
+
+    change font family; change font size of body (from 18 to 28, work?); li in blockquote added
+
+
+2019-07-20 15:04:03 -0400 84eeaae
+
+    title no uppercase
+
+
+2019-07-20 13:50:24 -0400 c5af5c8
+
+    add gnu hurd link
+
+
+2019-07-20 13:43:50 -0400 80b2241
+
+    link minix 3
+
+
+2019-07-20 13:41:44 -0400 57aae74
+
+    verve; ccured with safecode?
+
+
+2019-07-20 13:40:34 -0400 ca470e9
+
+    more oses
+
+
+2019-07-18 00:20:29 -0400 6dcd4b7
+
+    title of cheri userspace; 2015 programmers guide might be outdated
+
+
+2019-07-18 00:17:05 -0400 f750ba1
+
+    domain transition sandbox; 2 steps
+
+
+2019-07-18 00:09:35 -0400 4d49fbd
+
+    a new topic for domain interactino topology
+
+
+2019-07-17 23:31:43 -0400 72f1afd
+
+    more softbound
+
+
+2019-07-17 23:31:04 -0400 fb5d734
+
+    add github source for ccall impl
+
+
+2019-07-17 23:29:29 -0400 8b5c804
+
+    cheriABI ch2; more history of cheri from cheriABI
+
+
+2019-07-17 17:00:36 -0400 bde32b8
+
+    1. add ccall source in CheriBSD: no ccall instruction in binary, but instead 'dmtc2': double word move to coprocessor 2; 2. add sandbox loader source file path; 3. CheriABI paper introduction: C lang and MMU pages; 4. add KCoFI file.
+
+
+2019-07-17 00:10:36 -0400 5b1fc76
+
+    add sva references
+
+
+2019-07-16 23:37:39 -0400 7aea05a
+
+    grammar fix
+
+
+2019-07-16 22:29:57 -0400 92ba9ca
+
+    LLVA-OS question: a kernel language
+
+
+2019-07-16 22:10:22 -0400 e7f311f
+
+    safecode compartmentalization question
+
+
+2019-07-16 21:44:49 -0400 12251d8
+
+    userspace source directories
+
+
+2019-07-16 15:53:18 -0400 fb08fd7
+
+    move cheri down; add cheri userspace
+
+
+2019-07-16 13:54:48 -0400 b34f543
+
+     what cheri cannot do
+
+
+2019-07-16 11:07:22 -0400 5abbe27
+
+    - add cheri signal     - move kernel cap-less to proper page     - enable footnotes in markdown     - add new cheriabi folder     - update deploy scripts
+
+
+2019-07-15 15:28:57 -0400 a772c93
+
+    emphasize kernel no cap state
+
+
+2019-07-15 10:19:47 -0400 072a941
+
+    trusted stack from programmers guide, 2015
+
+
+2019-07-14 23:42:35 -0400 e5ebec5
+
+    context switch from 2015 programmers guide
+
+
+2019-07-14 22:07:40 -0400 825c4f3
+
+    new file context switch; new favicon
+
+
+2019-07-14 16:49:30 -0400 ce0aa5a
+
+    fix a rel link
+
+
+2019-07-14 16:34:37 -0400 d86a9d2
+
+    add kernel change list
+
+
+2019-07-14 14:50:28 -0400 29c3d05
+
+    cheriABI from 2015 programmers guide
+
+
+2019-07-11 20:43:13 -0400 1da3d21
+
+    folder name starting with _ will not render in github pages; use z- instead of _; for z-images/ z-pdfs/
+
+
+2019-07-11 20:29:08 -0400 2957747
+
+    hello example: static sandbox
+
+
+2019-07-10 02:49:27 -0400 a2ae71f
+
+    describe main testing code
+
+
+2019-07-10 02:41:36 -0400 7cacd77
+
+    a bare-metal sandbox, with no workload
+
+
+2019-07-09 01:22:44 -0400 7a4a2ff
+
+    add super kernel cap
+
+
+2019-07-08 00:31:40 -0400 fa6ef86
+
+    fix link of hidden menu
+
+
+2019-07-08 00:09:57 -0400 b9277a3
+
+    - add motivation of cheri from v5; - create title of mpk, riscv
+
+
+2019-07-07 14:24:11 -0400 ed9803d
+
+    mkdir cheri-kernel
+
+
+2019-07-06 21:58:13 -0400 b8c37e5
+
+    add todo list
+
+
+2019-07-05 22:30:45 -0400 a66928d
+
+    cheriabi intro
+
+
+2019-07-05 19:38:57 -0400 f7713bd
+
+    move cheri domain to subfolder
+
+
+2019-07-05 14:59:32 -0400 94ac2de
+
+    add cets paper
+
+
+2019-07-05 14:55:41 -0400 4dd71f1
+
+    temporal safety of pointers
+
+
+2019-07-05 02:18:13 -0400 5ce77df
+
+    llva-os added
+
+
+2019-07-05 02:15:10 -0400 b0ffbcd
+
+    llva-os added
+
+
+2019-07-05 00:37:07 -0400 9ae5fab
+
+    sva outlined
+
+
+2019-07-04 17:50:24 -0400 a3bc8fc
+
+    halting question on static analysis; update toc; c model by refine compiler.
+
+
+2019-07-03 17:10:06 -0400 98d10f2
+
+    cheri isa semantic; cheri formal methods
+
+
+2019-07-03 00:56:11 -0400 6fe6f6d
+
+    new file cheri kernel separation
+
+
+2019-07-03 00:22:48 -0400 7c6f7c5
+
+    top wonderings, 1,2,3.
+
+
+2019-07-02 16:44:00 -0400 c72d0e6
+
+    update deploy script
+
+
+2019-07-02 16:40:08 -0400 081dc5a
+
+    add cheri history figure
+
+
+2019-07-02 16:21:32 -0400 86e9432
+
+    done pdp11 c model
+
+
+2019-07-02 13:56:44 -0400 be56260
+
+    update pdp11 paper
+
+
+2019-07-02 01:54:47 -0400 371b172
+
+    new logo: le learn
+
+
+2019-07-02 01:33:10 -0400 c1f71e6
+
+    pdp11 update
+
+
+2019-07-01 17:58:12 -0400 6cd49c4
+
+    fix format
+
+
+2019-07-01 17:16:13 -0400 d2ce38c
+
+    add changelog to web repo dumpped from git log in hugo repo
+
+
+2019-07-01 16:47:54 -0400 ee01214
+
+    fix themesite images; cheri domain problems
+
+
+2019-07-01 11:33:34 -0400 374f6f3
+
+    revise cheri domain
+
+
+2019-07-01 03:49:43 -0400 f738c55
+
+    update github repo
+
+
+2019-07-01 03:47:31 -0400 5e40662
+
+    fix base url and image link issue: image path contain base url top dir
+
+
+2019-07-01 03:27:33 -0400 44c89ba
+
+    rename fat-ptrs to memsafety; add edit page button
+
+
+2019-07-01 03:07:32 -0400 7656b0f
+
+    add memoy safety fat pointers
+
+
+2019-07-01 02:44:13 -0400 e050c1d
+
+    add cheri
+
+
+2019-07-01 01:40:19 -0400 a983ef8
+
+    force push
+
+
+2019-07-01 01:38:57 -0400 116be20
+
+    draft as false by default;
+
+
+2019-07-01 01:35:21 -0400 3ce3d39
+
+    add reset option for deploy.sh
+
+
+2019-07-01 01:26:04 -0400 d4e0ee3
+
+    remove research unrelated text
+
+
+2019-07-01 01:25:05 -0400 7ac4821
+
+    add deploy.sh
+
+
+2019-06-26 17:17:59 -0400 72dd567
+
+    disable toc
+
+
+2019-06-26 17:15:40 -0400 aa6af78
+
+    dop jujutsu;
+
+
+2019-06-26 10:53:38 -0400 b981937
+
+    fix relative link error in themesite
+
+
+2019-06-26 02:09:36 -0400 9019e1b
+
+    reading Jun 25; - love and math, begin; - evolution of intelligent system, brain, begin; - compute sec policy, definition.
+
+
+2019-06-24 17:29:03 -0400 db5293b
+
+    ignore folder when building
+
+
+2019-06-24 17:24:45 -0400 7374f4b
+
+    remove public folder
+
+
+2019-06-24 17:05:51 -0400 a4ff375
+
+    adding theme example site as subsite, for reference; - testing zh basics
+
+
+2019-06-24 16:09:46 -0400 a223b26
+
+    example site with documentations
+
+
+2019-06-24 16:04:42 -0400 7494153
+
+    add submodule
+
+
+2019-06-24 16:02:14 -0400 97aae74
+
+    init commit by hugo new site

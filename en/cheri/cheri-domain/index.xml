@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cheri Domain on Lele&#39;s Memo</title>
+    <link>https://safersys.github.io/mm/en/cheri/cheri-domain/</link>
+    <description>Recent content in Cheri Domain on Lele&#39;s Memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 27 Jun 2019 15:17:15 -0400</lastBuildDate>
+    
+	<atom:link href="https://safersys.github.io/mm/en/cheri/cheri-domain/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CCall in CheriBSD</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-domain/ccall/</link>
+      <pubDate>Wed, 17 Jul 2019 15:37:55 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-domain/ccall/</guid>
+      <description>libcheri_invoke is defined in assembly code; two versions for different ABIs respectively.
+The Hybrid MIPS ABI (github):
+# file: lib/libcheri/mips/libcheri_invoke_hybrid.S  # # Assembly wrapper for CCall on an object-capability. Its function is to save # and restore any general-purpose and capability registers needed on either # side of CCall, but not handled by the compiler. This is done by creating an # on-stack frame which will be pointed to by $idc before CCall, and then # unwrapping it again.</description>
+    </item>
+    
+    <item>
+      <title>ccall Tests</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-domain/ccall-tests/</link>
+      <pubDate>Sat, 13 Jul 2019 14:03:30 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-domain/ccall-tests/</guid>
+      <description> References:
+[1]
+Stack Underflow /* * Perform a return without a corresponding invocation, to underflow the * trusted stack. */ void test_sandbox_trustedstack_underflow(const struct cheri_test *ctp __unused) { struct cheri_object returncap; void * __capability codecap /* currently ignored: asm (&amp;#34;$c1&amp;#34;) */; void * __capability datacap /* currently ignored: asm (&amp;#34;$c2&amp;#34;) */; returncap = libcheri_make_sealed_return_object(); codecap = returncap.co_codecap; datacap = returncap.co_datacap; /* * TODO: the branch delay slot has been removed. We can remove the nop * once we no longer expect to run on older bitfiles */ __asm__ __volatile__ (&amp;#34;ccall %0, %1, 1\n\tnop&amp;#34; : : &amp;#34;C&amp;#34;(codecap), &amp;#34;C&amp;#34;(datacap)); cheritest_failure_errx(&amp;#34;continued after attempted CReturn&amp;#34;); } </description>
+    </item>
+    
+    <item>
+      <title>Ssh</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-domain/ssh/</link>
+      <pubDate>Thu, 11 Jul 2019 00:22:29 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-domain/ssh/</guid>
+      <description>References:
+[1]</description>
+    </item>
+    
+    <item>
+      <title>Examples of Cheri Object Capabilities</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-domain/hello/</link>
+      <pubDate>Fri, 05 Jul 2019 19:55:39 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-domain/hello/</guid>
+      <description>References:
+[1]
+Code is derived from cheritest_ccall.c.
+Example 1: static sandboxes The first example is a hand-crafted, minimalist sandbox that don&amp;rsquo;t even have stacks: no local data, just contain one instruction creturn. For stacks, see libcheri examples
+For code capability, need a function pointer as base, and another function pointer as the boundary enclosing the last instruction. The following example have function named sandbox_creturn and ends on sandbox_creturn_end:
+.text .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-domain/sandbox-loader/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-domain/sandbox-loader/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

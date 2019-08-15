@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cheri Kernel on Lele&#39;s Memo</title>
+    <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/</link>
+    <description>Recent content in Cheri Kernel on Lele&#39;s Memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 03 Jul 2019 00:38:26 -0400</lastBuildDate>
+    
+	<atom:link href="https://safersys.github.io/mm/en/cheri/cheri-kernel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Copying Memory</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/memcopy/</link>
+      <pubDate>Tue, 16 Jul 2019 09:14:54 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-kernel/memcopy/</guid>
+      <description>The kernel&amp;rsquo;s bcopy, memcpy, copyin, and copyout routines are capability-unaware and will not preserve tag bits.
+New cheri_bcopy, cheri_memcpy, copyincap, and copyoutcap are used in situations where preserving tags is desirable &amp;ndash; such as copying in or out of CHERI trusted stacks.
+Clearing tag bits across conventional IPC, system call arguments, and so on is important in preventing the accidental leaking of rights between address space where only data copies are intended.</description>
+    </item>
+    
+    <item>
+      <title>Signals in Sandboxed Code</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/signal/</link>
+      <pubDate>Mon, 15 Jul 2019 15:36:57 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-kernel/signal/</guid>
+      <description>Questions/Proposals  Can a signal handler in userspace overwrite the trusted stack?  Umodified signal handling:
+ a regular MIPS process CHERI-aware process that does not make use of sandboxing (protection domains).  Signal in a sandbox When a signal must be delivered to the target thread and the code is executing in a sandbox of that thread. Then sandbox code&amp;rsquo;s stack cannot be used for signal handling. Kernel will have different operations in the following situations 1:</description>
+    </item>
+    
+    <item>
+      <title>Trusted Stack</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/trusted-stack/</link>
+      <pubDate>Mon, 15 Jul 2019 10:09:44 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-kernel/trusted-stack/</guid>
+      <description>References:
+[1] CHERI programmer&amp;rsquo;s guide, UCAM-CL-TR-877 Chapter 8.4, 2015.
+One trusted stack for each thread: pcb_cheristack.
+Initialized to empty when first thread in a process is created.
+Stack updates/inspections in the following situations:
+ CCall exception CReturn exception CHERI_GET_STACK via sysarch system call CHERI_SET_STACK via sysarch system call cheri_stack_unwind: if a signal is delivered to a thread that is executing sandboxed code, and suitable signal-handling configuration has not been set up to safely receive the delivered signal, then for certian signals the kernel will automatically unwind the stack back to the caller of the sandbox.</description>
+    </item>
+    
+    <item>
+      <title>CheriBSD Context Switch</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/context-switch/</link>
+      <pubDate>Sun, 14 Jul 2019 16:37:51 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-kernel/context-switch/</guid>
+      <description>References:
+[1] CHERI programmer&amp;rsquo;s guide, chapter 8.2, UCAM-CL-TR-877, 2015.
+Capability state save/restore for each thread and domain inside.
+ CheriBSD extends the kernel&amp;rsquo;s support for context management and switching to provide each user thread with its own capability-register file. This allows each thread to have its own complete capability state, compatible with the idea that capabilities are compiler-managed.
+ Context switching to kernel in 3 ways:
+ an initial saving of the userspace $PCC and C0 performed by the hardware and low-level exception handling code; a more complete capability register context save and restore when transitioning from a low-level exception handler to kernel C code; finally, saving and restoring of a capability-register-file subset during voluntary kernel context switches.</description>
+    </item>
+    
+    <item>
+      <title>Kernel Change List</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/kernel-changes/</link>
+      <pubDate>Sun, 14 Jul 2019 14:55:37 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-kernel/kernel-changes/</guid>
+      <description>References:
+[1] CHERI programmer&amp;rsquo;s guide, UCAM-CL-TR-877, 2015.
+Overview  booting: enable capability coprocessor. per-thread TCB:  a saved capability register file; a per-thread trusted stack  context-switching: save/restore capability register file for userspace. kernel debugger: print capability register file and other CHERI-related info. virtual-memory subsystem:  anonymous (swap-backed) memory objects: memory tags preserved; memory mappings are permitted to set the CHERI TLB bits enabling tagged loads and stores. other objects not yet to preserve tags.</description>
+    </item>
+    
+    <item>
+      <title>Kernel Cap</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/kernel-cap/</link>
+      <pubDate>Tue, 09 Jul 2019 01:17:32 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-kernel/kernel-cap/</guid>
+      <description>2015 programmer&amp;rsquo;s guide:
+ Kernel itself makes only minor use of capabilities; Kernel is not currently compiled with a capability-aware compiler; kernel threads do not have full capability-register-file state in their own PCBs.  A hardcoded kernel capability1:
+/* * Definition for a highly privileged kernel capability able to name the * entire address space, and suitable to derive all other kernel-related * capabilities from, including sealing capabilities. */ #define	CHERI_CAP_KERN_PERMS	\ 	(CHERI_PERMS_SWALL | CHERI_PERMS_HWALL) #define	CHERI_CAP_KERN_BASE	0x0 #define	CHERI_CAP_KERN_LENGTH	0xffffffffffffffff #define	CHERI_CAP_KERN_OFFSET	0x0  cherireg.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PrivAnalyzer: Measuring the Efficacy of Linux Privilege Use on Lele&#39;s Memo</title>
+    <link>https://safersys.github.io/mm/en/pri-sep/2019privana/</link>
+    <description>Recent content in PrivAnalyzer: Measuring the Efficacy of Linux Privilege Use on Lele&#39;s Memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 31 Jul 2019 10:30:09 -0400</lastBuildDate>
+    
+	<atom:link href="https://safersys.github.io/mm/en/pri-sep/2019privana/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

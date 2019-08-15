@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Welcome on Lele&#39;s Memo</title>
+    <link>https://safersys.github.io/mm/en/</link>
+    <description>Recent content in Welcome on Lele&#39;s Memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="https://safersys.github.io/mm/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jujutsu</title>
+      <link>https://safersys.github.io/mm/en/sys-sec/attacks/data-op/2015-ccs-jujutsu/</link>
+      <pubDate>Wed, 26 Jun 2019 02:28:18 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/sys-sec/attacks/data-op/2015-ccs-jujutsu/</guid>
+      <description>References:
+[1] Control Jujutsu: On the Weaknesses of Fine-Grained Control Flow Integrity. CCS, 2015.
+A new attack on fine-grained CF that exploit the incompleteness of pointer analysis, when combined with common software engineering practices, to enable an attacker to execute arbitrary malicious code.
+Concepts:  ICS: Indirect Call Site ACICS: Argument Corruptible Indirect Call Site RCE: Remote Code Execution DSA: Data Structure Analysis DEP: Data Execution Prevention ASLR: Address Space Layout Randomization SSP: Stack Smashing Protection ROP: Return-oriented Programming JOP: Jump-Oriented Programming  Threat Model The threat model in this paper is a remote attacker trying to hijack control of a machine by exploiting memory vulnerabilities.</description>
+    </item>
+    
+    <item>
+      <title>Secure HW/SW Interface</title>
+      <link>https://safersys.github.io/mm/en/sva/hwsw/securehwsw/</link>
+      <pubDate>Mon, 22 Jul 2019 16:15:09 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/sva/hwsw/securehwsw/</guid>
+      <description>Motivation OS memory safety research Memory safety for OS code:
+ OS designs based on safe languages; Compiler techniques such as SVA-M to enforce memory safety for commodity OSs in unsafe languages; Instrumentation techniques to isolate a kernel from extensions such as device drivers;  Singularity, SPIN, JX, JavaOS, SafeDrive, and SVA-M are examples of system that enforce a safe execution environment.
+Common asumptions of OS memory safety research Unfortunately, all these memory safety techniques (except Verve, which has very limited I/O and no MMU support) make assumptions that are routinely violated by low-level initeractions between an OS kernel and hardware, even if implemented in safe programming language.</description>
+    </item>
+    
+    <item>
+      <title>CCall in CheriBSD</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-domain/ccall/</link>
+      <pubDate>Wed, 17 Jul 2019 15:37:55 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-domain/ccall/</guid>
+      <description>libcheri_invoke is defined in assembly code; two versions for different ABIs respectively.
+The Hybrid MIPS ABI (github):
+# file: lib/libcheri/mips/libcheri_invoke_hybrid.S  # # Assembly wrapper for CCall on an object-capability. Its function is to save # and restore any general-purpose and capability registers needed on either # side of CCall, but not handled by the compiler. This is done by creating an # on-stack frame which will be pointed to by $idc before CCall, and then # unwrapping it again.</description>
+    </item>
+    
+    <item>
+      <title>Copying Memory</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/memcopy/</link>
+      <pubDate>Tue, 16 Jul 2019 09:14:54 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-kernel/memcopy/</guid>
+      <description>The kernel&amp;rsquo;s bcopy, memcpy, copyin, and copyout routines are capability-unaware and will not preserve tag bits.
+New cheri_bcopy, cheri_memcpy, copyincap, and copyoutcap are used in situations where preserving tags is desirable &amp;ndash; such as copying in or out of CHERI trusted stacks.
+Clearing tag bits across conventional IPC, system call arguments, and so on is important in preventing the accidental leaking of rights between address space where only data copies are intended.</description>
+    </item>
+    
+    <item>
+      <title>Signals in Sandboxed Code</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/signal/</link>
+      <pubDate>Mon, 15 Jul 2019 15:36:57 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-kernel/signal/</guid>
+      <description>Questions/Proposals  Can a signal handler in userspace overwrite the trusted stack?  Umodified signal handling:
+ a regular MIPS process CHERI-aware process that does not make use of sandboxing (protection domains).  Signal in a sandbox When a signal must be delivered to the target thread and the code is executing in a sandbox of that thread. Then sandbox code&amp;rsquo;s stack cannot be used for signal handling. Kernel will have different operations in the following situations 1:</description>
+    </item>
+    
+    <item>
+      <title>Trusted Stack</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/trusted-stack/</link>
+      <pubDate>Mon, 15 Jul 2019 10:09:44 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-kernel/trusted-stack/</guid>
+      <description>References:
+[1] CHERI programmer&amp;rsquo;s guide, UCAM-CL-TR-877 Chapter 8.4, 2015.
+One trusted stack for each thread: pcb_cheristack.
+Initialized to empty when first thread in a process is created.
+Stack updates/inspections in the following situations:
+ CCall exception CReturn exception CHERI_GET_STACK via sysarch system call CHERI_SET_STACK via sysarch system call cheri_stack_unwind: if a signal is delivered to a thread that is executing sandboxed code, and suitable signal-handling configuration has not been set up to safely receive the delivered signal, then for certian signals the kernel will automatically unwind the stack back to the caller of the sandbox.</description>
+    </item>
+    
+    <item>
+      <title>CheriBSD Context Switch</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/context-switch/</link>
+      <pubDate>Sun, 14 Jul 2019 16:37:51 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-kernel/context-switch/</guid>
+      <description>References:
+[1] CHERI programmer&amp;rsquo;s guide, chapter 8.2, UCAM-CL-TR-877, 2015.
+Capability state save/restore for each thread and domain inside.
+ CheriBSD extends the kernel&amp;rsquo;s support for context management and switching to provide each user thread with its own capability-register file. This allows each thread to have its own complete capability state, compatible with the idea that capabilities are compiler-managed.
+ Context switching to kernel in 3 ways:
+ an initial saving of the userspace $PCC and C0 performed by the hardware and low-level exception handling code; a more complete capability register context save and restore when transitioning from a low-level exception handler to kernel C code; finally, saving and restoring of a capability-register-file subset during voluntary kernel context switches.</description>
+    </item>
+    
+    <item>
+      <title>Kernel Change List</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/kernel-changes/</link>
+      <pubDate>Sun, 14 Jul 2019 14:55:37 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-kernel/kernel-changes/</guid>
+      <description>References:
+[1] CHERI programmer&amp;rsquo;s guide, UCAM-CL-TR-877, 2015.
+Overview  booting: enable capability coprocessor. per-thread TCB:  a saved capability register file; a per-thread trusted stack  context-switching: save/restore capability register file for userspace. kernel debugger: print capability register file and other CHERI-related info. virtual-memory subsystem:  anonymous (swap-backed) memory objects: memory tags preserved; memory mappings are permitted to set the CHERI TLB bits enabling tagged loads and stores. other objects not yet to preserve tags.</description>
+    </item>
+    
+    <item>
+      <title>ccall Tests</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-domain/ccall-tests/</link>
+      <pubDate>Sat, 13 Jul 2019 14:03:30 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-domain/ccall-tests/</guid>
+      <description> References:
+[1]
+Stack Underflow /* * Perform a return without a corresponding invocation, to underflow the * trusted stack. */ void test_sandbox_trustedstack_underflow(const struct cheri_test *ctp __unused) { struct cheri_object returncap; void * __capability codecap /* currently ignored: asm (&amp;#34;$c1&amp;#34;) */; void * __capability datacap /* currently ignored: asm (&amp;#34;$c2&amp;#34;) */; returncap = libcheri_make_sealed_return_object(); codecap = returncap.co_codecap; datacap = returncap.co_datacap; /* * TODO: the branch delay slot has been removed. We can remove the nop * once we no longer expect to run on older bitfiles */ __asm__ __volatile__ (&amp;#34;ccall %0, %1, 1\n\tnop&amp;#34; : : &amp;#34;C&amp;#34;(codecap), &amp;#34;C&amp;#34;(datacap)); cheritest_failure_errx(&amp;#34;continued after attempted CReturn&amp;#34;); } </description>
+    </item>
+    
+    <item>
+      <title>Ssh</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-domain/ssh/</link>
+      <pubDate>Thu, 11 Jul 2019 00:22:29 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-domain/ssh/</guid>
+      <description>References:
+[1]</description>
+    </item>
+    
+    <item>
+      <title>Kernel Cap</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-kernel/kernel-cap/</link>
+      <pubDate>Tue, 09 Jul 2019 01:17:32 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-kernel/kernel-cap/</guid>
+      <description>2015 programmer&amp;rsquo;s guide:
+ Kernel itself makes only minor use of capabilities; Kernel is not currently compiled with a capability-aware compiler; kernel threads do not have full capability-register-file state in their own PCBs.  A hardcoded kernel capability1:
+/* * Definition for a highly privileged kernel capability able to name the * entire address space, and suitable to derive all other kernel-related * capabilities from, including sealing capabilities. */ #define	CHERI_CAP_KERN_PERMS	\ 	(CHERI_PERMS_SWALL | CHERI_PERMS_HWALL) #define	CHERI_CAP_KERN_BASE	0x0 #define	CHERI_CAP_KERN_LENGTH	0xffffffffffffffff #define	CHERI_CAP_KERN_OFFSET	0x0  cherireg.</description>
+    </item>
+    
+    <item>
+      <title>Motivations</title>
+      <link>https://safersys.github.io/mm/en/cheri/intro/motivation/</link>
+      <pubDate>Sun, 07 Jul 2019 20:50:30 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/intro/motivation/</guid>
+      <description>ISA v5, p14:
+Ubiquitous computing changes threat models  Dramatic changes in threat models, resulting from ubiquitous connectivity and pervasive uses of computer technology in many diverse and widely used applications such as wireless mobile devices, automobiles, and critical infrastructure.
+ Endless &amp;ldquo;patch and pray&amp;rdquo; calls for architectural &amp;lsquo;immunity&amp;rsquo;  An extended &amp;ldquo;arm race&amp;rdquo; of inevitable vulnerabilities and novel new attack mechanisms has led to a cycle of &amp;ldquo;patch and pray&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Examples of Cheri Object Capabilities</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-domain/hello/</link>
+      <pubDate>Fri, 05 Jul 2019 19:55:39 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-domain/hello/</guid>
+      <description>References:
+[1]
+Code is derived from cheritest_ccall.c.
+Example 1: static sandboxes The first example is a hand-crafted, minimalist sandbox that don&amp;rsquo;t even have stacks: no local data, just contain one instruction creturn. For stacks, see libcheri examples
+For code capability, need a function pointer as base, and another function pointer as the boundary enclosing the last instruction. The following example have function named sandbox_creturn and ends on sandbox_creturn_end:
+.text .</description>
+    </item>
+    
+    <item>
+      <title>execve</title>
+      <link>https://safersys.github.io/mm/en/os/linux/execve/</link>
+      <pubDate>Fri, 05 Jul 2019 16:07:52 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/os/linux/execve/</guid>
+      <description>References:
+[1] How programs get run. LWN.net, 2015. [link1, link2]
+Load ELF binary In fs/binfmt_elf.c: load_elf_binary(): examining ELF header.
+flush_old_exec(): clears up state in kernel that refers to the previous program.
+setup_new_exec(): set up kernel&amp;rsquo;s internal state for the new program. flush_signal_handlers() sets up the signal handlers for the new program. do_close_on_exec() closes all of the old program&amp;rsquo;s file descriptors.
+Set up the virtual memory of the new program. The highest address for the stack is moved downward by a random offset.</description>
+    </item>
+    
+    <item>
+      <title>Definition of &#39;Security Policy&#39;</title>
+      <link>https://safersys.github.io/mm/en/sys-sec/security-pol/01-definition/</link>
+      <pubDate>Wed, 26 Jun 2019 01:44:16 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/sys-sec/security-pol/01-definition/</guid>
+      <description>Book: Computer Security, Art and Science, By Matt Bishop, 2nd edition.
+ A security policy defines &amp;ldquo;secure&amp;rdquo; for a system or a set of systems.
+A security policy is a statement that partitions the states of the system into a set of authorized, or secure, states and a set of unauthorized, or nonsecure, states.
+ </description>
+    </item>
+    
+    <item>
+      <title>Cheri Concentrate</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-cc/</link>
+      <pubDate>Thu, 27 Jun 2019 15:10:26 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-cc/</guid>
+      <description>Overview Cheri Concentrate(CC) is a compression scheme applied to CHERI. CC achieves the best published region encoding efficiency, solves important pipeline problems caused by a decompressed register file.
+Problem The object bounds and permission information encoded in capability pointers cause the largest overhead among all overheads. Thus need a new encoding scheme to reduce overhead, i.e a method for compression and decompression.
+Challenge  Pipeline optimization in terms of the hardware changes for the encoding scheme.</description>
+    </item>
+    
+    <item>
+      <title>Cheri Formal</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-fm/</link>
+      <pubDate>Wed, 03 Jul 2019 14:43:48 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-fm/</guid>
+      <description>References:
+[1] CHERI ISA v5 (2016).
+ Existing formal methodology applied to software security has significant problems with multi-address-space security models; formal approaches have relied on the usefullness of addresses(pointers) as unique names for objects. Whereas this weakness in formal methods is a significant problem for traditional CPU designs, which offser security primarily through rings and address-space translation, CHERI&amp;rsquo;s capability model is scoped within address spaces. This offers the possibility of applying existing software proof methodology in the context of hardware isolation (and other related properties) in a manner that was previously infeasible.</description>
+    </item>
+    
+    <item>
+      <title>Cheri Link</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-link/</link>
+      <pubDate>Fri, 28 Jun 2019 11:36:06 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-link/</guid>
+      <description>archetypes learning.md</description>
+    </item>
+    
+    <item>
+      <title>Cheri ISA Semantic</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-isa/</link>
+      <pubDate>Wed, 03 Jul 2019 16:36:40 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-isa/</guid>
+      <description>References:
+[1] ISA Semantics for ARMv8-A, RISC-V, and CHERI-MIPS. POPL, 2019
+Basiscs Architecture specifications define the fundamental interface between hardware and software: the envelope of allowd behaviour for processor implementations, and the basic assumtions for software development and verification.
+ In practise, they are typically prose and pseudocode documents, not rigorous or executable artifacts, leaving software and verification on shaky ground.  Sail: an ISA semantic language with dependent type system.</description>
+    </item>
+    
+    <item>
+      <title>KCoFI</title>
+      <link>https://safersys.github.io/mm/en/sva/hwsw/kcofi/</link>
+      <pubDate>Mon, 22 Jul 2019 16:29:37 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/sva/hwsw/kcofi/</guid>
+      <description>Reference1
+ referee ↩   </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-domain/sandbox-loader/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-domain/sandbox-loader/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Lele&#39;s Memo</title>
+    <link>https://safersys.github.io/mm/en/os/linux/</link>
+    <description>Recent content in Linux on Lele&#39;s Memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 20 Jul 2019 13:38:42 -0400</lastBuildDate>
+    
+	<atom:link href="https://safersys.github.io/mm/en/os/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>execve</title>
+      <link>https://safersys.github.io/mm/en/os/linux/execve/</link>
+      <pubDate>Fri, 05 Jul 2019 16:07:52 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/os/linux/execve/</guid>
+      <description>References:
+[1] How programs get run. LWN.net, 2015. [link1, link2]
+Load ELF binary In fs/binfmt_elf.c: load_elf_binary(): examining ELF header.
+flush_old_exec(): clears up state in kernel that refers to the previous program.
+setup_new_exec(): set up kernel&amp;rsquo;s internal state for the new program. flush_signal_handlers() sets up the signal handlers for the new program. do_close_on_exec() closes all of the old program&amp;rsquo;s file descriptors.
+Set up the virtual memory of the new program. The highest address for the stack is moved downward by a random offset.</description>
+    </item>
+    
+  </channel>
+</rss>

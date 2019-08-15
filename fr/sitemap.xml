@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://safersys.github.io/mm/fr/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://safersys.github.io/mm/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://safersys.github.io/mm/zh/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://safersys.github.io/mm/fr/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/fr/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://safersys.github.io/mm/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://safersys.github.io/mm/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://safersys.github.io/mm/fr/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/fr/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://safersys.github.io/mm/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://safersys.github.io/mm/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://safersys.github.io/mm/fr/tags/"
+                />
+  </url>
+  
+</urlset>

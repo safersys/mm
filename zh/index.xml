@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>乐乐的笔记</title>
+    <link>https://safersys.github.io/mm/zh/</link>
+    <description>Recent content on 乐乐的笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 26 Jun 2019 01:47:18 -0400</lastBuildDate>
+    
+	<atom:link href="https://safersys.github.io/mm/zh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>定义</title>
+      <link>https://safersys.github.io/mm/zh/sys-sec/security-pol/01-definition/</link>
+      <pubDate>Wed, 26 Jun 2019 01:47:18 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/zh/sys-sec/security-pol/01-definition/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

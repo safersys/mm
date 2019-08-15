@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/attacks/data-op/2015-ccs-jujutsu/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/embed/usfi/</loc>
+    <lastmod>2019-08-14T23:55:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/embed/minion/</loc>
+    <lastmod>2019-08-14T22:13:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/embed/</loc>
+    <lastmod>2019-08-14T22:13:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/langs/nesc/</loc>
+    <lastmod>2019-08-14T22:12:30-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/embed/nescheck/</loc>
+    <lastmod>2019-08-14T22:13:13-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/research/paperwriting/</loc>
+    <lastmod>2019-08-14T00:35:53-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/nacl/pnacl/</loc>
+    <lastmod>2019-08-14T00:48:06-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/practice/msinterview/</loc>
+    <lastmod>2019-08-13T15:14:39-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/defences/tamper-resistance/</loc>
+    <lastmod>2019-08-13T00:49:54-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/detection/prima/</loc>
+    <lastmod>2019-08-13T00:39:46-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/defences/info-flow/</loc>
+    <lastmod>2019-08-13T00:28:02-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/detection/flicker/</loc>
+    <lastmod>2019-08-13T00:28:02-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/detection/verifyexe/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/nacl/</loc>
+    <lastmod>2019-08-13T16:53:45-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/embed/uxom/</loc>
+    <lastmod>2019-08-15T00:10:43-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/attacks/pe/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/compilers/backend/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/langs/go/setup/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/os/l4/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/pri-sep/2019privana/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/langs/aop/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/pri-sep/2017enclave/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/pri-sep/2007web/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/pri-sep/2004privtrans/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/runtimechecks/funcptrs/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/langs/go/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/langs/rust/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/os/rust/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/2002controlc/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/runtimechecks/arraychecks/</loc>
+    <lastmod>2019-08-12T22:59:47-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/prog-ana/fm/hott/intro/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/prog-ana/fm/hott/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/runtimecheck/jones-kelly/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/runtimecheck/ruwas-lam/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/runtimecheck/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/prog-ana/interprocedural/cfg/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/prog-ana/interprocedural/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/dsa/passes/localdatastructures/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/dsa/passes/datastructures/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/dsa/passes/tddatastructures/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/dsa/passes/eqtddatastructures/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/dsa/passes/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/passes/stackcheck/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/passes/arraybnd/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/passes/ptrchecks/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/passes/poolchecks/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/riscv/attacks/sp-analog/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/riscv/attacks/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/cets/runtime/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/hwsw/securehwsw/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/os/gnu-hurd/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/os/freebsd/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/os/minix3/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-domain/sandbox-loader/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-domain/ccall/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-kernel/memcopy/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-kernel/signal/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-kernel/trusted-stack/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-kernel/context-switch/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-kernel/kernel-changes/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-domain/ccall-tests/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-domain/ssh/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-kernel/kernel-cap/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/intro/motivation/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-domain/hello/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/os/linux/execve/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/dsa/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/prog-ana/complexity/halting/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/intro/</loc>
+    <lastmod>2019-07-17T23:29:29-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/security-pol/</loc>
+    <lastmod>2019-08-12T23:54:26-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://safersys.github.io/mm/zh/sys-sec/security-pol/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://safersys.github.io/mm/en/sys-sec/security-pol/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/security-pol/01-definition/</loc>
+    <lastmod>2019-08-12T23:54:26-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://safersys.github.io/mm/zh/sys-sec/security-pol/01-definition/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://safersys.github.io/mm/en/sys-sec/security-pol/01-definition/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/2003nogc/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/temporal/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/poolalloc/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/langs/go/tour/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/2005embed/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/riscv/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/steensgaard/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/</loc>
+    <lastmod>2019-07-28T14:40:47-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/attacks/conpe/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/attacks/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://safersys.github.io/mm/zh/sys-sec/attacks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://safersys.github.io/mm/en/sys-sec/attacks/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/typesys/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/cets/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/prog-ana/pointer/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/lowfat/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-domain/</loc>
+    <lastmod>2019-07-17T17:00:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/attacks/data-op/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://safersys.github.io/mm/zh/sys-sec/attacks/data-op/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://safersys.github.io/mm/en/sys-sec/attacks/data-op/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/softbound/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/defences/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/runtimechecks/</loc>
+    <lastmod>2019-08-12T22:59:47-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/hardbound/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/llvaos/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-c-model/</loc>
+    <lastmod>2019-08-02T16:45:23-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/pri-sep/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/mmachine/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/mpx/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/mpk/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/ssm/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/sgx/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/detection/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/svaos/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheriabi/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/hwsw/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/prog-ana/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/vghost/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-cc/</loc>
+    <lastmod>2019-07-02T13:56:44-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/intrin/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sys-sec/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://safersys.github.io/mm/zh/sys-sec/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://safersys.github.io/mm/en/sys-sec/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-kernel/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-user/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/hacking/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/compilers/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/prog-ana/complexity/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/prog-ana/fm/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/safecode/passes/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/os/linux/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/os/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-fm/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-link/</loc>
+    <lastmod>2019-07-02T13:56:44-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/arch/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/langs/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/mem-safe/ripe/</loc>
+    <lastmod>2019-08-12T23:45:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-isa/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/langs/proofcc/</loc>
+    <lastmod>2019-08-13T16:27:26-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/langs/typedas/</loc>
+    <lastmod>2019-08-14T22:12:30-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/sva/hwsw/kcofi/</loc>
+    <lastmod>2019-08-10T21:50:17-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/research/</loc>
+    <lastmod>2019-08-12T16:39:42-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/practice/</loc>
+    <lastmod>2019-08-13T15:14:39-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/cheri/cheri-domain/sandbox-loader/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/categories/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://safersys.github.io/mm/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://safersys.github.io/mm/zh/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://safersys.github.io/mm/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/tags/</loc>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://safersys.github.io/mm/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://safersys.github.io/mm/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://safersys.github.io/mm/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://safersys.github.io/mm/en/</loc>
+    <lastmod>2019-08-13T15:14:39-04:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://safersys.github.io/mm/zh/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://safersys.github.io/mm/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://safersys.github.io/mm/en/"
+                />
+  </url>
+  
+</urlset>

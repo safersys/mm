@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CHERI on Lele&#39;s Memo</title>
+    <link>https://safersys.github.io/mm/en/cheri/</link>
+    <description>Recent content in CHERI on Lele&#39;s Memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 26 Jun 2019 02:26:46 -0400</lastBuildDate>
+    
+	<atom:link href="https://safersys.github.io/mm/en/cheri/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cheri Concentrate</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-cc/</link>
+      <pubDate>Thu, 27 Jun 2019 15:10:26 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-cc/</guid>
+      <description>Overview Cheri Concentrate(CC) is a compression scheme applied to CHERI. CC achieves the best published region encoding efficiency, solves important pipeline problems caused by a decompressed register file.
+Problem The object bounds and permission information encoded in capability pointers cause the largest overhead among all overheads. Thus need a new encoding scheme to reduce overhead, i.e a method for compression and decompression.
+Challenge  Pipeline optimization in terms of the hardware changes for the encoding scheme.</description>
+    </item>
+    
+    <item>
+      <title>Cheri Formal</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-fm/</link>
+      <pubDate>Wed, 03 Jul 2019 14:43:48 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-fm/</guid>
+      <description>References:
+[1] CHERI ISA v5 (2016).
+ Existing formal methodology applied to software security has significant problems with multi-address-space security models; formal approaches have relied on the usefullness of addresses(pointers) as unique names for objects. Whereas this weakness in formal methods is a significant problem for traditional CPU designs, which offser security primarily through rings and address-space translation, CHERI&amp;rsquo;s capability model is scoped within address spaces. This offers the possibility of applying existing software proof methodology in the context of hardware isolation (and other related properties) in a manner that was previously infeasible.</description>
+    </item>
+    
+    <item>
+      <title>Cheri Link</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-link/</link>
+      <pubDate>Fri, 28 Jun 2019 11:36:06 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-link/</guid>
+      <description>archetypes learning.md</description>
+    </item>
+    
+    <item>
+      <title>Cheri ISA Semantic</title>
+      <link>https://safersys.github.io/mm/en/cheri/cheri-isa/</link>
+      <pubDate>Wed, 03 Jul 2019 16:36:40 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/cheri/cheri-isa/</guid>
+      <description>References:
+[1] ISA Semantics for ARMv8-A, RISC-V, and CHERI-MIPS. POPL, 2019
+Basiscs Architecture specifications define the fundamental interface between hardware and software: the envelope of allowd behaviour for processor implementations, and the basic assumtions for software development and verification.
+ In practise, they are typically prose and pseudocode documents, not rigorous or executable artifacts, leaving software and verification on shaky ground.  Sail: an ISA semantic language with dependent type system.</description>
+    </item>
+    
+  </channel>
+</rss>

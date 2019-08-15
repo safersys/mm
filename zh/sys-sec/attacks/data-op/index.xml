@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面向数据编程 on 乐乐的笔记</title>
+    <link>https://safersys.github.io/mm/zh/sys-sec/attacks/data-op/</link>
+    <description>Recent content in 面向数据编程 on 乐乐的笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 26 Jun 2019 02:26:53 -0400</lastBuildDate>
+    
+	<atom:link href="https://safersys.github.io/mm/zh/sys-sec/attacks/data-op/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

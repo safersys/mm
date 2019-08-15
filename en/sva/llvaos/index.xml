@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LLVA OS on Lele&#39;s Memo</title>
+    <link>https://safersys.github.io/mm/en/sva/llvaos/</link>
+    <description>Recent content in LLVA OS on Lele&#39;s Memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Fri, 05 Jul 2019 00:59:52 -0400</lastBuildDate>
+    
+	<atom:link href="https://safersys.github.io/mm/en/sva/llvaos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

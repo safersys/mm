@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DOP on Lele&#39;s Memo</title>
+    <link>https://safersys.github.io/mm/en/sys-sec/attacks/data-op/</link>
+    <description>Recent content in DOP on Lele&#39;s Memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 26 Jun 2019 02:26:46 -0400</lastBuildDate>
+    
+	<atom:link href="https://safersys.github.io/mm/en/sys-sec/attacks/data-op/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jujutsu</title>
+      <link>https://safersys.github.io/mm/en/sys-sec/attacks/data-op/2015-ccs-jujutsu/</link>
+      <pubDate>Wed, 26 Jun 2019 02:28:18 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/sys-sec/attacks/data-op/2015-ccs-jujutsu/</guid>
+      <description>References:
+[1] Control Jujutsu: On the Weaknesses of Fine-Grained Control Flow Integrity. CCS, 2015.
+A new attack on fine-grained CF that exploit the incompleteness of pointer analysis, when combined with common software engineering practices, to enable an attacker to execute arbitrary malicious code.
+Concepts:  ICS: Indirect Call Site ACICS: Argument Corruptible Indirect Call Site RCE: Remote Code Execution DSA: Data Structure Analysis DEP: Data Execution Prevention ASLR: Address Space Layout Randomization SSP: Stack Smashing Protection ROP: Return-oriented Programming JOP: Jump-Oriented Programming  Threat Model The threat model in this paper is a remote attacker trying to hijack control of a machine by exploiting memory vulnerabilities.</description>
+    </item>
+    
+  </channel>
+</rss>

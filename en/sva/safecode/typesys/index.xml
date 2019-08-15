@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Type System in SAFECode on Lele&#39;s Memo</title>
+    <link>https://safersys.github.io/mm/en/sva/safecode/typesys/</link>
+    <description>Recent content in Type System in SAFECode on Lele&#39;s Memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 30 Jul 2019 11:41:50 -0400</lastBuildDate>
+    
+	<atom:link href="https://safersys.github.io/mm/en/sva/safecode/typesys/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

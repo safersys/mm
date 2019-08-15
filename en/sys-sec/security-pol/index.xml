@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security Policies on Lele&#39;s Memo</title>
+    <link>https://safersys.github.io/mm/en/sys-sec/security-pol/</link>
+    <description>Recent content in Security Policies on Lele&#39;s Memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 26 Jun 2019 01:44:53 -0400</lastBuildDate>
+    
+	<atom:link href="https://safersys.github.io/mm/en/sys-sec/security-pol/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Definition of &#39;Security Policy&#39;</title>
+      <link>https://safersys.github.io/mm/en/sys-sec/security-pol/01-definition/</link>
+      <pubDate>Wed, 26 Jun 2019 01:44:16 -0400</pubDate>
+      
+      <guid>https://safersys.github.io/mm/en/sys-sec/security-pol/01-definition/</guid>
+      <description>Book: Computer Security, Art and Science, By Matt Bishop, 2nd edition.
+ A security policy defines &amp;ldquo;secure&amp;rdquo; for a system or a set of systems.
+A security policy is a statement that partitions the states of the system into a set of authorized, or secure, states and a set of unauthorized, or nonsecure, states.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

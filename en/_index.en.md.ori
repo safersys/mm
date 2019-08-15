@@ -1,0 +1,89 @@
+---
+title: "Welcome"
+---
+
+
+### Welcome ! 
+
+Hellooo! Here is hosted my reading notes! I will try to keep them organized. However, they will look like memory flakes since my interests keep changing and expanding.
+
+### Todos
+
+
+- What is proof carrying code? How to generate such code?
+- How to remove Compilers from trusted computing base? When compiler are heavily used for security solutions?
+
+- Automatic program partition for privilege separation?
+
+### Book Shelf
+
+
+#### Math.FM.
+
+"Logical Foundations for Computing Science". By Shen Enshao. 2006.
+
+"Logic for Computer Science." By Steve Reeves and Mike Clarke. 2003.
+
+"Homotopy Type Theory: Univalent Foundations of Mathematics". The Univalent Foundations Program, 2013.
+
+#### Complexity
+
+"Introduction to Automata Theory, Languages, and Computation". By John E. Hopcroft, Rajeev Motwani, and Jeffery D. Ullman. 2006.
+
+"Computers and Intractability: A Guide to the Theory of NP-Completeness". By Micheal Garey and David S. Johnson. 1979.
+
+#### Algorithms
+
+"Introduction to Algorithms". By Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein. 2009.
+
+"The Art of Multiprocessor Programming". By Maurice Herlihy, and Nir Shavit. 2008.
+
+#### Program Analysis
+
+"Principles of Program Analysis". By Flemming Nielson, Hanne Riis Nielson, and Chris Hankin. 1998.
+
+#### Languages
+
+"Types and Programming Languages". By Benjamin C. Pierce. 2002.
+
+"Advanced Topics in Types and Programming Languages". By Benjamin C. Pierce, editor. 2004.
+
+"Practical Foundations for Programming Languages". By Robert Harper. 2012.
+
+#### Com.Arch
+
+"Computer Organization and Design, The Hardware/Software Interface". By David A. Patterson, and John L. Hennessy. 5th ed. 2014.
+
+"Computer Architecture: A Quantitative Approach". By John L. Hennessy, and David A. Patterson. 5th ed. 2012.
+
+#### Com.Sys
+
+"Computer Systems: A Programmer's Perspective". By Randal E. Bryant, and David R. O'Hallaron. 3rd ed, 2015.
+
+"The Design and Implementation of the FreeBSD Operating System". By Marshall Kirk McKusick, George V. Neville-Neil, and Robert N.M. Watson, 2nd ed, 2014.
+
+"Understanding the Linux Kernel". By Daniel P. Bovet, and Marco Cesati. 3rd ed. 2005.
+
+
+#### Compilers
+
+"Compilers: Principles, Techniques, and Tools". By Alfred V. Aho, Monica S. Lam, Ravi Sethi, and Jeffrey D. Ullman. 2nd ed. 2007.
+
+"Advanced Compiler Design and Implementation". By Steven S. Muchnick. 1997.
+
+"Engineering A Compiler". By Keith D. Cooper, and Linda Torczon. 2nd ed. 2012.
+
+
+"Optimizinig Compilers for Modern Architectures: A Dependence-based Approach". By Randy Allen, and Ken Kennedy. 2001.
+
+
+#### Software Programming Practice
+
+"Design Patterns: Elements of Reusable Object-Oriented Software". By GoF, 1994.
+
+《编程之美--微软技术面试心得》，电子工业出版社，2008。
+
+
+
+### Update History
+
